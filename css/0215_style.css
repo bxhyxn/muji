@@ -1,4 +1,7 @@
-html {overflow-y:overlay; overflow-x: hidden;}
+html {overflow-y:overlay; overflow-x: hidden;
+max-height: 100vw;}
+
+
 /* width */
 ::-webkit-scrollbar {
   width: 5px;
