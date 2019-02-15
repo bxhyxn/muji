@@ -1,4 +1,4 @@
-html,body {overflow-y:overlay; overflow-x:hidden;
+body {overflow-y:overlay; overflow-x:hidden !important;
 margin:0;}
 
 
