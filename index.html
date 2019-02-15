@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>0214_TEST_MUJI</title>
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/evil-icons@1.9.0/assets/evil-icons.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/evil-icons@1.9.0/assets/evil-icons.min.css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&amp;subset=korean" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/0215_style.css">
+</head>
+    
+<body>
+    <header class="sticky-top top-nav-wrapper">
+        <div class="topbar container-fluid row p-0 m-0">
+            <div class="topbar-left col-3 d-flex align-items-center px-1">
+                <!-- 지역 설정 버튼 -->
+                <a id="sel-location"  href="#" data-target="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle d-none d-lg-inline-block"><div data-icon="ei-location" data-size="s"></div></a>
+                    <!-- 지역 설정  드롭다운 -->
+                    <div arialabelledby="sel-location" class="loca-dropdown border-light p-0 dropdown-menu ">
+                        <div class="loca-dropdown">
+                            <div class="loca-wrapper">
+                                <h5>Choose your country or region</h5>
+                                <h6>Asia Pacific </h6>
+                                <ul class="d-block d-flex flex-wrap p-0">
+                                    <li class="col-4"><a href="#">Japan</a></li>
+                                    <li class="col-4"><a href="#">Hong Kong</a></li>
+                                    <li class="col-4"><a href="#">Singapore</a></li>
+                                    <li class="col-4"><a href="#">Korea</a></li>
+                                    <li class="col-4"><a href="#">Taiwan</a></li>
+                                    <li class="col-4"><a href="#">China</a></li>
+                                    <li class="col-4"><a href="#">Thailand</a></li>
+                                    <li class="col-4"><a href="#">Indonesia</a></li>
+                                    <li class="col-4"><a href="#">Philippines</a></li>
+                                    <li class="col-4"><a href="#">Malaysia</a></li>
+                                    <li class="col-4"><a href="#">Kuwait</a></li>
+                                    <li class="col-4"><a href="#">UAE</a></li>
+                                    <li class="col-4"><a href="#">Australia</a></li>
+                                    <li class="col-4"><a href="#">India</a></li>
+                                    <li class="col-4"><a href="#">Saudi Arabia</a></li>
+                                    <li class="col-4"><a href="#">Bahrain</a></li>
+                                    <li class="col-4"><a href="#">Qatar</a></li>
+                                </ul>
+                                <hr>
+                                <h6>Europe </h6>
+                                <ul class="d-block d-flex flex-wrap p-0">
+                                    <li class="col-4"><a href="#">U.K</a></li>
+                                    <li class="col-4"><a href="#">France</a></li>
+                                    <li class="col-4"><a href="#">Ireland</a></li>
+                                    <li class="col-4"><a href="#">Sweden</a></li>
+                                    <li class="col-4"><a href="#">Italy</a></li>
+                                    <li class="col-4"><a href="#">Germany</a></li>
+                                    <li class="col-4"><a href="#">Spain</a></li>
+                                    <li class="col-4"><a href="#">Portugal</a></li>
+                                    <li class="col-4"><a href="#">Poland</a></li>
+                                </ul>
+                                <hr>
+                                <h6>North America </h6>
+                                <ul class="d-block d-flex flex-wrap p-0 ">
+                                    <li class="col-6"><a href="#">United States</a></li>
+                                    <li class="col-6"><a href="#">Canada</a></li>
+                                </ul>
+                                <hr>
+                                <div class="store-locater text-center p-0 m-0"><a href="#">Store Locater  <div data-icon="ei-arrow-right" data-size="s"></div></a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 지역설정 드롭다운 끝 -->
+                <!-- 메뉴 버튼 (collapse) -->
+                <button type="button" data-toggle="collapse" data-target="#cateCollapse" aria-controls="cateCollapse" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler d-lg-none p-0"><div data-icon="ei-navicon" data-size="s"></div></button>
+                
+            </div>
+            <div class="topbar-logo col-6 px-2 text-center">
+                <img src="img/logo_muji_color.png" alt="">
+            </div>
+            <div class="topbar-right col-3 px-2 d-flex justify-content-end align-items-center">
+                <a class="mr-2 d-none d-md-block" href="#"><div data-icon="ei-user" data-size="s"></div></a>
+                <a id="cartdetails"  href=".cart.html" data-target="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle topbar-cart-icon d-none d-md-block"><div data-icon="ei-cart" data-size="s"></div><div class="badge">3</div></a>
+                    <!-- 카트 드롭다운 -->
+                    <div arialabelledby="cartdetails" class="cart-dropdown border-light p-0 dropdown-menu dropdown-menu-right">
+                        <div class="cart-product-wrapper">
+                            <div class="cart-product">
+                                <div class="d-flex justify-content-between">
+                                   <a href="#" class="cart-item-img"><img src="img/item/best_01.jpg" alt=""></a>
+                                   <div class="cart-item-text my-auto">
+                                       <a href="#">
+                                           <p class="m-0"><strong>발이 편한 스니커</strong><br>
+                                           <small class="text-muted">
+                                               Quantitiy: 1
+                                           </small><br>
+                                           <small>￦34,900</small>
+                                           </p>
+                                       </a>
+                                   </div>
+                                   <a href="#" class="item-del my-auto"><div data-icon="ei-close-o" data-size="s"></div></a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="cart-product">
+                                <div class="d-flex justify-content-between">
+                                   <a href="#" class="cart-item-img"><img src="img/item/new_07.jpg" alt=""></a>
+                                   <div class="cart-item-text my-auto">
+                                       <a href="#">
+                                           <p class="m-0"><strong>재킷</strong><br>
+                                           <small class="text-muted">
+                                               Quantitiy: 1
+                                           </small><br>
+                                           <small>￦79,900</small>
+                                           </p>
+                                       </a>
+                                   </div>
+                                   <a href="#" class="item-del my-auto"><div data-icon="ei-close-o" data-size="s"></div></a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="cart-product">
+                                <div class="d-flex justify-content-between">
+                                   <a href="#" class="cart-item-img"><img src="img/item/best_07.jpg" alt=""></a>
+                                   <div class="cart-item-text my-auto">
+                                       <a href="#">
+                                           <p class="m-0"><strong>포터블 아로마 디퓨저</strong><br>
+                                           <small class="text-muted">
+                                               Quantitiy: 1
+                                           </small><br>
+                                           <small>￦39,900</small>
+                                           </p>
+                                       </a>
+                                   </div>
+                                   <a href="#" class="item-del my-auto"><div data-icon="ei-close-o" data-size="s"></div></a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="px-2 d-flex justify-content-between">
+                                <p class="text-muted">TOTAL</p>
+                                <p><strong>￦154,700</strong></p>
+                            </div>
+                            <hr>
+                            <div class="cart-btn d-flex text-center">
+                                <div class="view-btn w-50">
+                                <a href="#">&nbsp;&nbsp;View cart&nbsp;&nbsp;</a></div>
+                                <div class="chkout-btn w-50">
+                                <a href="#">Checkout</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 카트 드롭다운 끝 -->
+                <button class="srch-btn" data-target="#srch-modal" data-toggle="modal"><div data-icon="ei-search" data-size="s"></div></button>
+              </div>
+        </div>
+        <nav class="navbar navbar-expand-lg p-0">
+            <div id="cateCollapse" class="category-wrapper collapse navbar-collapse">
+                <!-- 카테고리 리스트 -->
+                <ul class="category navbar-nav mx-auto">
+                <li class="dropdown px-3 pb-2 mx-1">
+                    <a href="#">About MUJI</a>
+                </li>
+                <li class="dropdown px-3 pb-2 mx-1">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">MUJI 특별기획
+                    </a>
+                    <ul class="dropdown-menu muji-special">
+                        <li><a href="#">인기상품</a></li>
+                        <li><a href="#">신상품</a></li>
+                        <li><a href="#">온라인 한정 사이즈</a></li>
+                        <li><a href="#">From Japan</a></li>
+                        <li><a href="#">무료 배송</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown px-3 pb-2 mx-1">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">의류잡화
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">MUJI LABO</a></li>
+                        <li><a href="#">남성복</a></li>
+                        <li><a href="#">여성복</a></li>
+                        <li><a href="#">아동복·마터니티</a></li>
+                        <li><a href="#">이너웨어</a></li>
+                        <li><a href="#">가방·신발</a></li>
+                        <li><a href="#">액세서리·양말·우산</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown px-3 pb-2 mx-1">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">식품
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">과자·음료·소스</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown px-3 pb-2 mx-1">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">생활잡화
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">패브릭</a></li>
+                        <li><a href="#">가구·인테리어</a></li>
+                        <li><a href="#">주방·생활용품</a></li>
+                        <li><a href="#">헬스/뷰티·아로마</a></li>
+                        <li><a href="#">화장품</a></li>
+                        <li><a href="#">전자제품·기프트</a></li>
+                        <li><a href="#">문구</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown px-3 pb-2 mx-1">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">할인상품
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">가격 인하</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown px-3 pb-2 mx-1">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">아울렛
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#">의류 잡화 아울렛</a></li>
+                        <li><a href="#">생활 잡화 아울렛</a></li>
+                    </ul>
+                </li>
+            </ul>
+                <!-- 스크린 작을 때만 카테고리 하단에 나타나는 유저 버튼 -->
+                    <ul class="category-sm d-flex text-center w-100 px-0 my-1 d-md-none">
+                        <li class="w-50 m-0 p-0 "><a href="#"><div data-icon="ei-user" data-size="s"></div><span>Log in</span></a></li>
+                        <li class="w-50 m-0 p-0"><a href="#"><div data-icon="ei-cart" data-size="s"></div><span>View cart</span></a></li>
+                    </ul>
+                
+            </div>
+        </nav>
+    </header>
+    <!--메인 비주얼 이미지 슬라이더-->
+    <section id="banner-slider" class="carousel slide home-full-slider-wrapper m-o p-0" data-ride="carousel">
+        <div class="carousel-inner home-full-slider">
+            <div class="carousel-item active">
+                <div class="col-lg-12 home-full-item">
+                    <img class="bg-image" src="img/mv/mv_mj.jpg" alt="muji">
+                    <div class="carousel-caption">
+                        <h4 class="txt-shdw">What is MUJI?</h4>
+                        <p class="lead txt-shdw">항상 북극을 가리키는 나침반처럼,<br> 우리는 생활의 '기본'과 '보편'을 지향해 나갈 것입니다.</p>
+                        <p class="discover-btn"><a href="#">Discover more</a></p>
+                    </div>
+                    </div>
+                </div>
+            <div class="carousel-item  home-full-item">
+                <img class="bg-image" src="img/mv/mv_wood.jpg" alt="wood">
+                <div class="carousel-caption">
+                    <h4>떡갈나무 천연 목재 가구</h4>
+                    <p class="lead">사용하면 할수록 깊이가 다른 나무 그대로의 가구<br>나무를 보고 숲을 봅니다</p>
+                    <p class="discover-btn"><a href="#">Discover more</a></p>
+                </div>
+            </div>
+            <div class="carousel-item  home-full-item">
+                <img class="bg-image" src="img/mv/mv_aroma.jpg" alt="aroma diffuser">
+                <div class="carousel-caption">
+                    <h4>초음파 아로마 가습기</h4>
+                    <p class="lead">원하는 곳에, 원하는 만큼</p>
+                    <p class="discover-btn"><a href="#">Discover more</a></p>
+                </div> 
+            </div>   
+            <!--좌우 이동 버튼-->
+            <a class="carousel-control-prev" href="#banner-slider" role="button" data-slide="prev">
+                <span aria-hidden="true"><div data-icon="ei-chevron-left" data-size="l"></div></span>
+                <span class="sr-only">PREV</span>
+            </a>
+            <a class="carousel-control-next" href="#banner-slider" role="button" data-slide="next">
+                <span aria-hidden="true"><div data-icon="ei-chevron-right" data-size="l"></div></span>
+                <span class="sr-only">NEXT</span>
+            </a>
+        </div>
+        <!--하단 이동 버튼-->
+        <ol class="carousel-indicators">
+            <li data-target="#banner-slider" data-slide-to="0" class="active"></li>
+            <li data-target="#banner-slider" data-slide-to="1"></li>
+            <li data-target="#banner-slider" data-slide-to="2"></li>
+        </ol>
+    </section>
+    <!-- 아이템 목록 슬라이더 -->
+    <section id="products-slider" class="text-center">
+        <h6 class="text-uppercase">Products</h6>
+        <div class="container-fluid p-0 m-0">
+            <ul class="tab-title nav nav-tabs mb-2 justify-content-center border-0" id="myTab" role="tablist">
+              <li class="nav-item border-0">
+                <a class="nav-link border-0 active" id="best-tab" data-toggle="tab" href="#best" role="tab" aria-controls="best" aria-selected="true">Best</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link border-0" id="new-tab" data-toggle="tab" href="#new" role="tab" aria-controls="new" aria-selected="false">New</a>
+              </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+               <div class="tab-container tab-pane fade show active" id="best" role="tabpanel" aria-labelledby="best-tab">
+                    <div class="container-fluid p-0 m-0">
+                        <div class="row m">
+                            <div id="item-slider" class="carousel slide container-fluid" data-ride="carousel">
+                                <div class="best-tab-inner carousel-inner">
+                                    <ol class="carousel-indicators">
+                                        <li data-target="#item-slider" data-slide-to="0" class="active"></li>
+                                        <li data-target="#item-slider" data-slide-to="1"></li>
+                                    </ol>
+                                    <div class="carousel-item active">
+                                        <div class="row items-wrapper">
+                                            <div class="col-4 col-md-2 item-container">
+                                                <a href="#"><img src="img/item/best_01.jpg" alt=""/>
+                                                <p class="item-name">발이 편한 스니커</p>
+                                                <p class="item-price">￦34,900</p></a>
+                                            </div>
+                                            <div class="col-4 col-md-2 item-container">
+                                                <a href="#"><img src="img/item/best_02.jpg" alt=""/>
+                                                <p class="item-name">벽걸이형 블루투스 스피커</p>
+                                                <p class="item-price">￦139,000</p></a>
+                                            </div>
+                                            <div class="col-4 col-md-2 item-container">
+                                                <a href="#"><img src="img/item/best_03.jpg" alt=""/>
+                                                <p class="item-name">발이 편한 스니커</p>
+                                                <p class="item-price">￦34,900</p></a>
+                                            </div>
+                                            <div class="col-4 col-md-2 item-container">
+                                                <a href="#"><img src="img/item/best_04_.png" alt=""/>
+                                                <p class="item-name">에센셜 오일 라벤더 10ml</p>
+                                                <p class="item-price">￦19,000</p></a>
+                                            </div>
+                                            <div class="col-4 col-md-2 item-container">
+                                                <a href="#"><img src="img/item/best_05.jpg" alt=""/>
+                                                <p class="item-name">타일 브러쉬</p>
+                                                <p class="item-price">￦2,900</p></a>
+                                            </div>
+                                            <div class="col-4 col-md-2 item-container">
+                                                <a href="#"><img src="img/item/best_06.jpg" alt=""/>
+                                                <p class="item-name">파자마</p>
+                                                <p class="item-price">￦49,900</p></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="row items-wrapper">
+                                            <div class="col-4 col-md-2 item-container">
+                                                <a href="#"><img src="img/item/best_07.jpg" alt=""/>
+                                                <p class="item-name">포터블 아로마 디퓨저</p>
+                                                <p class="item-price">￦39,900</p></a>
+                                            </div>
+                                            <div class="col-4 col-md-2 item-container">
+                                                <a href="#"><img src="img/item/best_08.jpg" alt=""/>
+                                                <p class="item-name">볼펜 · 블루블랙 · 0.38mm</p>
+                                                <p class="item-price">￦1,000</p></a>
+                                            </div>
+                                            <div class="col-4 col-md-2 item-container">
+                                                <a href="#"><img src="img/item/best_09.jpg" alt=""/>
+                                                <p class="item-name">소프트 박스ㆍ장방형ㆍM</p>
+                                                <p class="item-price">￦13,000</p></a>
+                                            </div>
+                                            <div class="col-4 col-md-2 item-container">
+                                                <a href="#"><img src="img/item/best_10.jpg" alt=""/>
+                                                <p class="item-name">런치 스푼 · 아동용</p>
+                                                <p class="item-price">￦2,900</p></a>
+                                            </div>
+                                            <div class="col-4 col-md-2 item-container">
+                                                <a href="#"><img src="img/item/best_11.jpg" alt=""/>
+                                                <p class="item-name">젤 잉크 노크식 · 블랙 · 0.5mm</p>
+                                                <p class="item-price">￦1,300</p></a>
+                                            </div>
+                                            <div class="col-4 col-md-2 item-container">
+                                                <a href="#"><img src="img/item/best_12.jpg" alt=""/>
+                                                <p class="item-name">메이크 박스ㆍ1/4</p>
+                                                <p class="item-price">￦3,600</p></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+               </div>    
+               <div class="tab-container tab-pane fade" id="new" role="tabpanel" aria-labelledby="best-tab">
+                  <div class="container-fluid">
+                    <div class="row">
+                        <div id="new-item-slider" class="carousel slide container-fluid" data-ride="carousel">
+                            <div class="new-tab-inner carousel-inner">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#new-item-slider" data-slide-to="0" class="active"></li>
+                                    <li data-target="#new-item-slider" data-slide-to="1"></li>
+                                </ol>
+                                <div class="carousel-item active">
+                                    <div class="row items-wrapper">
+                                        <div class="col-4 col-md-2 item-container">
+                                            <a href="#"><img src="img/item/new_01.jpg" alt=""/>
+                                            <p class="item-name">버튼다운 셔츠</p>
+                                            <p class="item-price">￦24,900</p></a>
+                                        </div>
+                                        <div class="col-4 col-md-2 item-container">
+                                            <a href="#"><img src="img/item/new_02.jpg" alt=""/>
+                                            <p class="item-name">더블링 노트ㆍ무지 · B5ㆍ80매ㆍ다크그레이</p>
+                                            <p class="item-price">￦4,300</p></a>
+                                        </div>
+                                        <div class="col-4 col-md-2 item-container">
+                                            <a href="#"><img src="img/item/new_03.jpg" alt=""/>
+                                            <p class="item-name">스탠드칼라 리브 셔츠</p>
+                                            <p class="item-price">￦49,900</p></a>
+                                        </div>
+                                        <div class="col-4 col-md-2 item-container">
+                                            <a href="#"><img src="img/item/new_04.jpg" alt=""/>
+                                            <p class="item-name">보더 긴소매 티셔츠</p>
+                                            <p class="item-price">￦19,900</p></a>
+                                        </div>
+                                        <div class="col-4 col-md-2 item-container">
+                                            <a href="#"><img src="img/item/new_05.jpg" alt=""/>
+                                            <p class="item-name">쇼트 삭스 3족 세트</p>
+                                            <p class="item-price">￦8,000</p></a>
+                                        </div>
+                                        <div class="col-4 col-md-2 item-container">
+                                            <a href="#"><img src="img/item/new_06.jpg" alt=""/>
+                                            <p class="item-name">옥스포드 셔츠</p>
+                                            <p class="item-price">￦29,900</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="row items-wrapper">
+                                        <div class="col-4 col-md-2 item-container">
+                                            <a href="#"><img src="img/item/new_07.jpg" alt=""/>
+                                            <p class="item-name">재킷</p>
+                                            <p class="item-price">￦79,900</p></a>
+                                        </div>
+                                        <div class="col-4 col-md-2 item-container">
+                                            <a href="#"><img src="img/item/new_08.jpg" alt=""/>
+                                            <p class="item-name">파자마</p>
+                                            <p class="item-price">￦34,900</p></a>
+                                        </div>
+                                        <div class="col-4 col-md-2 item-container">
+                                            <a href="#"><img src="img/item/new_09.jpg" alt=""/>
+                                            <p class="item-name">집업 파카</p>
+                                            <p class="item-price">￦34,900</p></a>
+                                        </div>
+                                        <div class="col-4 col-md-2 item-container">
+                                            <a href="#"><img src="img/item/new_10.jpg" alt=""/>
+                                            <p class="item-name">륙색·A4 사이즈</p>
+                                            <p class="item-price">￦29,900</p></a>
+                                        </div>
+                                        <div class="col-4 col-md-2 item-container">
+                                            <a href="#"><img src="img/item/new_11.jpg" alt=""/>
+                                            <p class="item-name">파자마</p>
+                                            <p class="item-price">￦39,900</p></a>
+                                        </div>
+                                        <div class="col-4 col-md-2 item-container">
+                                            <a href="#"><img src="img/item/new_12.jpg" alt=""/>
+                                            <p class="item-name">파자마</p>
+                                            <p class="item-price">￦39,900</p></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+              </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- 무지 스토리 카드 -->   
+    <section id="mujistory" class="text-center">
+       <h6 class="text-uppercase">Muji story</h6>
+        <div class="container-fluid mt-4">
+            <div class="story-card-wrapper row">
+                <div class="story-card col-6 col-lg-3">
+                    <div class="card"><a href="#">
+                        <img src="img/card/01.jpg" alt="" class="card-img">
+                        <div class="card-img-overlay">
+                            <p>MUJI의 모듈</p>
+                        </div></a>
+                    </div>
+                </div>
+                <div class="story-card col-6 col-lg-3">
+                    <div class="card"><a href="#">
+                        <img src="img/card/02.jpg" alt="" class="card-img">
+                        <div class="card-img-overlay">
+                            <p>MUJI의 아카이브</p>
+                        </div></a>
+                    </div>
+                </div>
+                <div class="story-card col-6 col-lg-3">
+                    <div class="card"><a href="#">
+                        <img src="img/card/03.jpg" alt="" class="card-img">
+                        <div class="card-img-overlay">
+                            <p>MUJI의 디자인</p>
+                        </div></a>
+                    </div>
+                </div>
+                <div class="story-card col-6 col-lg-3">
+                    <div class="card"><a href="#">
+                        <img src="img/card/04.jpg" alt="" class="card-img">
+                        <div class="card-img-overlay">
+                            <p>MUJI의 가구</p>
+                        </div></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 퀵 메뉴 -->
+    <section id="quick-menu">
+        <h6 class="text-center">Quick menu</h6>
+        <div class="q-icon-wrapper container-fluid">
+            <div class="d-flex justify-content-around">
+                <a href="#"><div data-icon="ei-bell" data-size="m"></div><span>공지사항</span></a>
+                <a href="#"><div data-icon="ei-location" data-size="m"></div><span>매장안내</span></a>
+                <a href="#"><div data-icon="ei-clock" data-size="m"></div><span>배송안내</span></a>
+                <a href="#"><div data-icon="ei-heart" data-size="m"></div><span>생활제안</span></a>
+                <a href="#"><div data-icon="ei-question" data-size="m"></div><span>고객센터</span></a>
+            </div>
+        </div>
+    </section>
+    <!-- 푸터 -->
+    <footer>
+        <div class="muji-sns row p-0 px-3">
+                <div class="muji-sns-logo col-4 col-lg-2">
+                <img src="img/logo_muji_color.png" alt=""> </div>
+                <div class="muji-sns-icons col-8 col-lg-10">
+                    <ul class="d-flex m-0 px-0">
+                        <li><a href="#"><div data-icon="ei-sc-twitter" data-size="s"></div></a></li>
+                        <li><a href="#"><div data-icon="ei-sc-facebook" data-size="s"></div></a></li>
+                        <li><a href="#"><div data-icon="ei-sc-instagram" data-size="s"></div></a></li>
+                        <li><a href="#"><div data-icon="ei-sc-youtube" data-size="s"></div></a></li>
+                    </ul>
+                </div>
+        </div>
+        <div class="footer-contents row px-3">
+            <div class="col-sm-4 col-lg-2 d-flex justify-content-between">
+                <a href="">
+                <img src="img/lotte_shopping_gray.png" alt="" class="footer_logo_lotte"></a>
+            </div>
+            <div class="col-sm-8 col-lg-2">
+                <p>MUJI 온라인스토어는<br><a href="#">롯데 LECS</a>를 이용하고 있습니다.</p>
+            </div>
+            <div class="col-sm-4  col-lg-2">
+                <p><a href="#">이용약관</a></p>
+                <p><a href="#">개인정보처리방침</a></p>
+                <p><a href="#">LECS안내 및 문의</a></p>
+                <p><a href="#">롯데쇼핑e커머스 사업본부 소개</a></p>
+            </div>
+            <div class="col-xs-12 col-sm-8 col-lg-6">
+                <p>롯데쇼핑 주식회사 대표이사 강희태</p>
+                <p>서울특별시 송파구 올림픽로 300 롯데월드타워 26층 / 사업자등록번호 : 529-85-00774 (롯데쇼핑(주) e커머스 사업본부) <p>통신판매업 신고 : 2019-서울송파-0158 / 고객만족센터: 1577-2892 muji@lotte.com (공정거래위원회 사업자정보확인)</p>
+                <p>호스팅 서비스 사업자 : 롯데쇼핑㈜ e커머스 사업본부</p>
+            </div>
+            <div class="footer-copyright col-12">
+                <hr>
+                <p>Copyright LOTTE SHOPPING Co., Ltd. e-commerce business division All right reserved.</p>
+            </div>
+        </div>
+            
+        
+    </footer>
+    
+    
+    
+    <!-- 검색창 모달--> 
+    <div id="srch-modal" class="modal fade" tabindex="-1" role="dialog" arialabelledby="">
+        <div class="modal-dialog w-100" role="document">
+           <div class="modal-content">
+                <div class="text-right">
+                    <button type="button" class="m-1" data-dismiss="modal">
+                        <div data-icon="ei-close"></div>
+                    </button>
+                 </div>
+                 <div class="search-form-wrapper my-auto pb-4">
+                  <form class="search-form d-flex justify-content-center" role="search">
+                      <div class="form-group pb-3">
+                          <input type="text" class="form-control" placeholder="검색어를 입력하세요">
+                      </div>
+                      <button class="submit-btn" type="submit"> <div data-icon="ei-search"></div>
+                      </button>
+                  </form>
+                </div>
+           </div>
+        </div>
+    </div>
+    <!-- 검색창 모달 끝-->
+    
+    <script type="text/javascript">
+    //큰 화면에서 스크롤 다운 했을 때 헤더 작아지도록 설정// 
+    $(function() {(
+        $(window).on("scroll", function() {
+            if ($(window).scrollTop() >= 20) {
+                $(".top-nav-wrapper").addClass("compressed")
+                ;
+            }
+            else { 
+                $(".top-nav-wrapper").removeClass("compressed")
+                ;
+            }
+        })
+    )});
+        
+        
+    //카테고리 드롭다운 열려있을 때 헤더가 hover 유지//
+//        $(function() {
+//       if ($('a.dropdown-toggle').filter("[aria-expanded='true']")) {
+//           $(".top-nav-wrapper").addClass("hover");
+//       }
+//       else {
+//           $(".top-nav-wrapper").removeClass("hover");
+//       }
+//   });
+        
+//    $(function() {
+//        if ($('.navbar-toggler').attr('aria-expanded') === "true") {
+//            $(".top-nav-wrapper").addClass("hover");
+//        }
+//        else {
+//            $(".top-nav-wrapper").remfoveClass("hover");
+//        }
+//    });
+////    
+//    $(function() {
+//    if ($(".dropdown-toggle[aria-expanded='true']")) {
+//        $(".top-nav-wrapper").addClass("hover")
+//    }
+//    else {
+//        $(".top-nav-wrapper").removeClass("hover")
+//    }
+//    });
+        
+        
+    //카테고리 아이템 클릭 시 헤더에 hover 유지되도록 설정//
+//    $(function() {
+//        $(".navbar-toggler").click(function () {
+//            $('.top-nav-wrapper').toggleClass("hover");
+//        });
+//    });
+//    $(function() {
+//        $("ul.category li.dropdown").click(function () {
+//            $('.top-nav-wrapper').toggleClass("hover");
+//        });
+//    });
+    </script>
+</body>
+</html>
