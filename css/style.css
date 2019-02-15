@@ -22,15 +22,6 @@ button:focus {
     outline: 0 !important;
 }
 
-.form-control {
-    border-radius: 0;
-}
-.form-control:focus {
-    outline: 0 !important;
-    border-color: initial;
-    box-shadow: none;
-}
-
 .txt-shdw {
     text-shadow: 1px 1px 1px gray;
 }
@@ -498,20 +489,30 @@ img.bg-image{
 .card img {
     display: block;
     border-radius: 0;
-    transition: all 1s;
+    transition: all 1s ease;
 }
 .card:hover img {
     transform: scale(1.2);
-    opacity: 0.5;
+    opacity: 0.4;
 }
 .card-img-overlay {
+    display: none;
     height:25%; 
-    top:0;
-    background-color: rgba(255,255,255,0.3);
+    top:35%; padding:0;
+    transition: all 1s ease;
+}
+
+.card:hover .card-img-overlay {
+    display: block;
 }
 .card-img-overlay p {
+    margin:0;
     font-size: 0.8rem;
     font-weight: 500;
+    position: absolute;
+    text-align: center;
+    top:50%; left:-50%; right:-50%;
+    transform: translateY(-50%);
 }
 
 /* 퀵 메뉴 */
@@ -683,8 +684,17 @@ footer p{
     width:80%;
     max-width: 500px;
 }
-.form-group input {
+.form-control {
     outline:none;font-size:0.9rem;font-weight:300;background:none;border:none;border-bottom:1px solid #aaa;
+    border-radius: 0; background-color: to;
+}
+.form-control[type="text"] {
+    background: transparent;
+}
+.form-control:focus {
+    outline: 0 !important;
+    border-color: initial;
+    box-shadow: none;
 }
 
 /* 스크롤바 설정 */
