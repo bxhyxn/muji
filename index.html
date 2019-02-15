@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1.0, user-scalable=0">
     <title>0214_TEST_MUJI</title>
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
@@ -80,7 +80,8 @@
                 
             </div>
             <div class="topbar-logo col-6 px-2 text-center">
-                <img src="img/logo_muji_color.png" alt="">
+                <a href="#">
+                <img src="img/logo_muji_color.png" alt=""></a>
             </div>
             <div class="topbar-right col-3 px-2 d-flex justify-content-end align-items-center">
                 <a class="mr-2 d-none d-md-block" href="#"><div data-icon="ei-user" data-size="s"></div></a>
@@ -293,7 +294,7 @@
             <div class="tab-content" id="myTabContent">
                <div class="tab-container tab-pane fade show active" id="best" role="tabpanel" aria-labelledby="best-tab">
                     <div class="container-fluid p-0 m-0">
-                        <div class="row m">
+                        <div class="row">
                             <div id="item-slider" class="carousel slide container-fluid" data-ride="carousel">
                                 <div class="best-tab-inner carousel-inner">
                                     <ol class="carousel-indicators">
@@ -515,10 +516,11 @@
     </section>
     <!-- 푸터 -->
     <footer>
-        <div class="muji-sns row p-0 px-3">
-                <div class="muji-sns-logo col-4 col-lg-2">
-                <img src="img/logo_muji_color.png" alt=""> </div>
-                <div class="muji-sns-icons col-8 col-lg-10">
+        <div class="muji-sns row p-0 px-3 m-0">
+                <div class="muji-sns-logo px-0 col-4 col-lg-2">
+                    <img src="img/logo_muji_color.png" alt=""> 
+                </div>
+                <div class="muji-sns-icons px-0 col-8 col-lg-10">
                     <ul class="d-flex m-0 px-0">
                         <li><a href="#"><div data-icon="ei-sc-twitter" data-size="s"></div></a></li>
                         <li><a href="#"><div data-icon="ei-sc-facebook" data-size="s"></div></a></li>
@@ -528,18 +530,18 @@
                 </div>
         </div>
         <div class="footer-contents row px-3">
-            <div class="col-sm-4 col-lg-2 d-flex justify-content-between">
+            <div class="col-sm-4 col-lg-2 pb-0">
                 <a href="">
                 <img src="img/lotte_shopping_gray.png" alt="" class="footer_logo_lotte"></a>
             </div>
             <div class="col-sm-8 col-lg-2">
                 <p>MUJI 온라인스토어는<br><a href="#">롯데 LECS</a>를 이용하고 있습니다.</p>
             </div>
-            <div class="col-sm-4  col-lg-2">
-                <p><a href="#">이용약관</a></p>
-                <p><a href="#">개인정보처리방침</a></p>
-                <p><a href="#">LECS안내 및 문의</a></p>
-                <p><a href="#">롯데쇼핑e커머스 사업본부 소개</a></p>
+            <div class="footer-links row m-0 col-sm-4 col-lg-2">
+                <div class="col-sm-12"><p><a href="#">이용약관</a></p></div>
+                <div class="col-sm-12"><p><a href="#">개인정보처리방침</a></p></div>
+                <div class="col-sm-12"><p><a href="#">LECS안내 및 문의</a></p></div>
+                <div class="col-sm-12"><p><a href="#">롯데쇼핑e커머스 사업본부 소개</a></p></div>
             </div>
             <div class="col-xs-12 col-sm-8 col-lg-6">
                 <p>롯데쇼핑 주식회사 대표이사 강희태</p>
@@ -551,9 +553,11 @@
                 <p>Copyright LOTTE SHOPPING Co., Ltd. e-commerce business division All right reserved.</p>
             </div>
         </div>
-            
-        
     </footer>
+    
+    
+    <!-- TOP 버튼 -->
+    <a id="back-to-top" class="go-top" href="#"><div data-icon="ei-chevron-up"></div></a>
     
     
     
@@ -580,20 +584,40 @@
     </div>
     <!-- 검색창 모달 끝-->
     
+    
+    
+    
+    <script>
+    $(document).ready(function(){ 
+    $(window).scroll(function(){ 
+        if ($(window).scrollTop() > 100) { 
+            $('.go-top').addClass("show"); 
+        } else { 
+            $('.go-top').removeClass("show"); 
+        } 
+    }); 
+    $('.go-top').click(function(){ 
+        $("html, body").animate({ scrollTop: 0 }, 600); 
+        return false; 
+    }); 
+});
+    
+    </script>
+    
     <script type="text/javascript">
     //큰 화면에서 스크롤 다운 했을 때 헤더 작아지도록 설정// 
     $(function() {(
         $(window).on("scroll", function() {
             if ($(window).scrollTop() >= 20) {
-                $(".top-nav-wrapper").addClass("compressed")
-                ;
+                $(".top-nav-wrapper").addClass("compressed");
             }
             else { 
-                $(".top-nav-wrapper").removeClass("compressed")
-                ;
+                $(".top-nav-wrapper").removeClass("compressed");
             }
         })
     )});
+        
+        
         
         
     //카테고리 드롭다운 열려있을 때 헤더가 hover 유지//
