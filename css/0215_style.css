@@ -1,4 +1,30 @@
-body {font-family: 'Noto Sans KR', sans-serif; font-weight: 400;}
+html {overflow-y:overlay; overflow-x: hidden;}
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000; 
+}
+
+
+
+
+body {font-family: 'Noto Sans KR', sans-serif; font-weight: 400;
+    width: 100%;
+}
 
 a {color:black;}
 a:hover {color:#7f0019; text-decoration: none;}
@@ -321,29 +347,35 @@ header.hover {
     .category .dropdown-menu {
         position: inherit;
         text-align: inherit;
-        text-indent: 1.5rem;
-        top:100%;
         left:0; right:0;
         margin:0;
+        text-indent: 3rem;
         background-color: rgba(0,0,0,0.04);
         box-shadow: none;
+        padding:0;
     }
     
     .category .dropdown-menu.muji-special {
-        
         left:0; right:0;
     }
     
-    .category .dropdown-menu a {
+    
+    .category .dropdown-menu>li>a {
         font-size: 0.7rem; font-weight: 400;
         color:black;
+        padding: 0.8rem 0;
+    }
+    
+    .category .dropdown-menu>li>a:hover {
+        padding: 0.8rem 0;
+        background-color: rgba(0, 0, 0, 0.06);
     }
     
     .category-sm {
         margin: 0!important;
     }
     .category-sm .icon{
-    margin-top: 8px;
+    margin-top: 8px;    
 }
     .category-sm a {
         display: block;
@@ -456,10 +488,11 @@ img.bg-image{
 
 #products-slider img{
     width:100%;
-    min-width:110px;
+    min-width:90px;
     max-width: 150px;
     margin: 1rem 0;
 }
+
 
 .tab-title {
     text-transform: uppercase;
@@ -474,6 +507,7 @@ img.bg-image{
     color:#7f0019 !important;
     font-weight: 500;
 }
+
 
 .tab-container .carousel-item {
     margin:0;
@@ -606,7 +640,7 @@ img.bg-image{
 
 footer {
     background-color: #f8f8f8;
-    font-size: 0.7rem;   
+    font-size: 0.65rem;   
 }
 footer a{
     font-weight: 500;
@@ -627,6 +661,9 @@ footer p{
     height:15px;
     padding: 0;margin: 0 0 -8px 0;
 }
+
+
+
 .muji-sns-icons li div {
     padding:0;
     margin-bottom: -2px;
@@ -646,6 +683,15 @@ footer p{
     height:40px;
 }
 
+.footer-links div{
+    padding:0;
+    margin-right: 0.7rem;
+}
+
+.footer-links p{
+    margin: 0.1rem 0;
+}
+
 .footer-copyright {
     padding-top: 0 !important;
     text-align: center;
@@ -655,32 +701,74 @@ footer p{
     margin-top:2px;
 }
 
+
+/* top 버튼 */
+
+.go-top{
+    display: inline-block;
+    position: fixed;
+    bottom: 0;
+    border:1px solid black;
+    width: 35px;
+    height: 35px;
+    z-index: 9999;
+    bottom: 10px;
+    right: 5px;
+    opacity:0;
+    transition: opacity 0.2s ease;
+}
+
+.go-top .icon {
+    fill:black;
+    margin: 5px;
+}
+
+.go-top.show {
+    opacity:1;
+}
+
+.go-top:hover {
+    border: 1px solid #7f0019;
+    background-color: #7f0019;
+    opacity:1;
+}
+
+.go-top:hover .icon {
+    fill:white;
+}
+
+
+
 /* 검색창 모달 */
+
+
+#srch-modal .icon {
+    color: #999;
+}
+
+#srch-modal .icon:hover {
+     fill:#7f0019;
+}
 
 .modal-backdrop {
     z-index: 1019;
 }
+.modal-dialog {
+    width:100%;
+    margin: 0 auto;
+}
 
 .modal-content {
+    width:95%;
     height: 50vh;
-    margin-top:20vh;
-    
+    margin: 20vh auto;
 }
-.modal-content .icon {
-    color: #999;
-}
+
 
 .modal-content .submit-btn {
     height:30px;
     margin: 2px 0 0 -40px;
-    border:none;
-    background-color: transparent;
 }
-
-.modal-content .submit-btn .icon:hover {
-    fill:#7f0019;
-}
-
 
 .form-group {
     width:75%;
@@ -689,5 +777,6 @@ footer p{
 .form-group input {
     outline:none;font-size:0.9rem;font-weight:300;background:none;border:none;border-bottom:1px solid #aaa
 }
+
 
 
