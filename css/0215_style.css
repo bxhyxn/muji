@@ -1,5 +1,5 @@
-html {overflow-y:overlay; overflow-x: hidden;
-width: 100vw; height:100%;}
+html,body {overflow-y:overlay; overflow-x:hidden;
+margin:0;}
 
 
 /* width */
