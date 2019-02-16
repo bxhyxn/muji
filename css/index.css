@@ -171,6 +171,49 @@ img.bg-image{
     transform: translateY(-50%);
 }
 
+/* 퀵 메뉴 */
+#quick-menu .q-icon-wrapper {
+    margin-top:3rem;
+}
+#quick-menu a{
+    display: block;
+    position: relative;
+    width: 14vw; max-width: 140px;
+    height: 14vw; max-height: 140px;
+    border-radius: 50%;
+    background-color: #eee;
+    transition: all 0.3s ease;
+}
+#quick-menu a:hover{
+    background-color: #f8f8f8;
+}
+#quick-menu span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom:25%;
+    font-size: 0.8rem;
+    text-align: center;
+}
+#quick-menu a:hover span{
+    color:#7f0019;
+}
+#quick-menu .icon {
+    position: absolute;
+    width: 5vw;
+    margin-top: auto; top:-20%; margin-bottom: auto; bottom:0;
+    margin-left: auto; margin-right: auto;
+    left:0; right:0;
+}
+@media (max-width: 576px){
+    #quick-menu span{
+        font-size: 0.6rem;
+        bottom:23%;
+    }
+    #quick-menu .icon {
+        top:-30%;
+    }
+}
 
 
 
