@@ -1,11 +1,11 @@
+@charset "utf-8";
+
 body {
     font-family: 'Noto Sans KR', sans-serif; 
     font-weight: 400;
 }
-section{
-    overflow-x: hidden;
-}
-footer {
+
+section, footer {
     overflow-x: hidden;
 }
 
@@ -390,15 +390,20 @@ header {
     margin: 1.2rem 0 3rem;
     font-size: 1rem;
 }
+
+#banner-slider .carousel-caption .discover-btn {
+    display:inline-block;
+    margin:0;
+}
 #banner-slider .carousel-caption .discover-btn>a {
-    padding: 0.8rem 3rem;
-    color:white;
+    display: block; 
+    color:white; padding: 0.8rem 3rem;
     font-size: 0.5rem;
     text-transform: uppercase;
     letter-spacing: 0.1rem;
     border: 1px solid white;
     background: linear-gradient(to right, white 50%, transparent 50%);
-    background-size: 210% 100%;
+    background-size: 220% 100%;
     background-position: right bottom;
     transition: all .5s ease;
 }
@@ -587,8 +592,8 @@ footer p{
     background-color: #eee;
 }
 .muji-sns ul, li {list-style: none;}
-.muji-sns-logo img {
-    height:15px; padding:0; margin-top:6px;
+.muji-sns img {
+    height:16px; padding:0; margin-top:6px;
 }
 .muji-sns-icons li div {
     padding:0;
@@ -599,6 +604,12 @@ footer p{
 }
 .muji-sns-icons .icon:hover{
     fill:#7f0019;
+}
+.footer-q-mnu {
+    
+}
+.footer-q-mnu li{
+    margin-right: 1rem; 
 }
 
 .footer-contents div { 
@@ -678,6 +689,7 @@ footer p{
     width:100vw;
     height: 100vh;
     margin: 0 auto;
+    border-radius: 0;
     background-color: rgba(255,255,255,0.9);
 }
 .modal-content .submit-btn {

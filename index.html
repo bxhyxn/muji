@@ -18,7 +18,7 @@
                 <!-- 지역 설정 버튼 -->
                 <a id="sel-location"  href="#" data-target="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle d-none d-lg-inline-block"><div data-icon="ei-location" data-size="s"></div></a>
                     <!-- 지역 설정  드롭다운 -->
-                    <div arialabelledby="sel-location" class="loca-dropdown border-light p-0 dropdown-menu ">
+                    <div aria-labelledby="sel-location" class="loca-dropdown border-light p-0 dropdown-menu ">
                         <div class="loca-wrapper">
                                 <h5>Choose your country or region</h5>
                                 <h6>Asia Pacific </h6>
@@ -77,7 +77,7 @@
                 <a class="mr-2 d-none d-md-block" href="#"><div data-icon="ei-user" data-size="s"></div></a>
                 <a id="cartdetails"  href=".cart.html" data-target="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle topbar-cart-icon d-none d-md-block"><div data-icon="ei-cart" data-size="s"></div><div class="badge">3</div></a>
                     <!-- 카트 드롭다운 -->
-                    <div arialabelledby="cartdetails" class="cart-dropdown border-light p-0 dropdown-menu dropdown-menu-right">
+                    <div aria-labelledby="cartdetails" class="cart-dropdown border-light p-0 dropdown-menu dropdown-menu-right">
                         <div class="cart-product-wrapper">
                             <div class="cart-product">
                                 <div class="d-flex justify-content-between">
@@ -199,19 +199,16 @@
                         </ul>
                     </li>
                     <li class="dropdown px-3 pb-2 mx-1">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">할인상품
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">할인/아울렛
                         </a>
                         <ul class="dropdown-menu">
                             <li><a href="#">가격 인하</a></li>
+                            <li><a href="#">의류잡화 아울렛</a></li>
+                            <li><a href="#">생활잡화 아울렛</a></li>
                         </ul>
                     </li>
                     <li class="dropdown px-3 pb-2 mx-1">
-                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">아울렛
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">의류 잡화 아울렛</a></li>
-                            <li><a href="#">생활 잡화 아울렛</a></li>
-                        </ul>
+                        <a href="#">기획전</a>
                     </li>
                 </ul>
                     <!-- 스크린 작을 때만 카테고리 하단에 나타나는 유저 버튼 -->
@@ -251,14 +248,22 @@
                     <p class="lead">원하는 곳에, 원하는 만큼</p>
                     <p class="discover-btn"><a href="#">Discover more</a></p>
                 </div> 
+            </div>
+            <div class="carousel-item  home-full-item">
+                <img class="bg-image" src="img/mv/mv_ctn.jpg" alt="organic cotton">
+                <div class="carousel-caption">
+                    <h4>면 緬</h4>
+                    <p class="lead">오가닉 코튼 침구 시리즈</p>
+                    <p class="discover-btn"><a href="#">Discover more</a></p>
+                </div> 
             </div>   
             <!--좌우 이동 버튼-->
             <a class="carousel-control-prev" href="#banner-slider" role="button" data-slide="prev">
-                <span aria-hidden="true"><div data-icon="ei-chevron-left" data-size="l"></div></span>
+                <div aria-hidden="true" data-icon="ei-chevron-left" data-size="l"></div>
                 <span class="sr-only">PREV</span>
             </a>
             <a class="carousel-control-next" href="#banner-slider" role="button" data-slide="next">
-                <span aria-hidden="true"><div data-icon="ei-chevron-right" data-size="l"></div></span>
+                <div aria-hidden="true" data-icon="ei-chevron-right" data-size="l"></div>
                 <span class="sr-only">NEXT</span>
             </a>
         </div>
@@ -267,6 +272,7 @@
             <li data-target="#banner-slider" data-slide-to="0" class="active"></li>
             <li data-target="#banner-slider" data-slide-to="1"></li>
             <li data-target="#banner-slider" data-slide-to="2"></li>
+            <li data-target="#banner-slider" data-slide-to="3"></li>
         </ol>
     </section>
     <!-- 아이템 목록 슬라이더 -->
@@ -480,14 +486,6 @@
                 </div>
                 <div class="story-card col-6 col-lg-3">
                     <div class="card"><a href="#">
-                        <img src="img/card/fabric.jpg" alt="" class="card-img">
-                        <div class="card-img-overlay">
-                            <p>MUJI의 패브릭</p>
-                        </div></a>
-                    </div>
-                </div>
-                <div class="story-card col-6 col-lg-3">
-                    <div class="card"><a href="#">
                         <img src="img/card/04.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
                             <p>MUJI의 가구</p>
@@ -499,6 +497,14 @@
                         <img src="img/card/food.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
                             <p>MUJI의 음식</p>
+                        </div></a>
+                    </div>
+                </div>
+                <div class="story-card col-6 col-lg-3">
+                    <div class="card"><a href="#">
+                        <img src="img/card/fabric.jpg" alt="" class="card-img">
+                        <div class="card-img-overlay">
+                            <p>MUJI의 패브릭</p>
                         </div></a>
                     </div>
                 </div>
@@ -537,15 +543,23 @@
     <!-- 푸터 -->
     <footer>
         <div class="muji-sns row m-0">
-                <div class="muji-sns-logo col-5 col-md-4 col-lg-2">
-                    <img src="img/logo_muji_color.png" alt=""> 
+                <div class="col-5 col-sm-4 col-md-4 col-lg-2 py-2">
+                    <a href=""><img src="img/logo_muji_color.png" alt=""></a>
                 </div>
-                <div class="muji-sns-icons col-7 col-md-8  col-lg-10 px-0">
+                <div class="muji-sns-icons col-7 col-sm-8 col-md-3 col-lg-2 px-0 py-2">
                     <ul class="d-flex m-0 px-0">
                         <li><a href="#"><div data-icon="ei-sc-twitter" data-size="s"></div></a></li>
                         <li><a href="#"><div data-icon="ei-sc-facebook" data-size="s"></div></a></li>
                         <li><a href="#"><div data-icon="ei-sc-instagram" data-size="s"></div></a></li>
                         <li><a href="#"><div data-icon="ei-sc-youtube" data-size="s"></div></a></li>
+                    </ul>
+                </div>
+                <div class="footer-q-mnu col-md-5 py-2 my-auto">
+                    <ul class="d-flex m-0 px-0">
+                        <li><a href="#">About Muji</a></li>
+                        <li><a href="#">매장안내</a></li>
+                        <li><a href="#">배송 및 서비스</a></li>
+                        <li><a href="#">고객센터</a></li>
                     </ul>
                 </div>
         </div>
@@ -606,7 +620,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>  
     <script src="https://cdn.jsdelivr.net/npm/evil-icons@1.9.0/assets/evil-icons.min.js"></script>
-    <script type="text/javascript">
+    <script>
         
     //스크롤 다운 시 헤더 작아지고 탑버튼 나오도록 설정//    
     $(function() {(
