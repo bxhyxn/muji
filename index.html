@@ -75,7 +75,7 @@
                 <img src="img/logo_muji_color.png" alt=""></a>
             </div>
             <div class="topbar-right col-3 px-2 d-flex justify-content-end align-items-center">
-                <a class="mr-2 d-none d-md-block" href="customer-login.html"><div data-icon="ei-user" data-size="s"></div></a>
+                <button class="login-btn d-none d-md-block" data-target="#login-modal" data-toggle="modal"><div data-icon="ei-user" data-size="s"></div></button>
                 <a id="cartdetails"  href="cart.html" data-target="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle topbar-cart-icon d-none d-md-block"><div data-icon="ei-cart" data-size="s"></div><div class="badge">3</div></a>
                     <!-- 카트 드롭다운 -->
                     <div aria-labelledby="cartdetails" class="cart-dropdown border-light p-0 dropdown-menu dropdown-menu-right">
@@ -214,8 +214,8 @@
                 </ul>
                     <!-- 스크린 작을 때만 카테고리 하단에 나타나는 유저 버튼 -->
                     <ul class="category-sm d-flex text-center w-100 px-0 my-1 d-md-none">    
-                        <li class="m-0 p-0 "><a href="muji-global.html"><div data-icon="ei-location" data-size="s"></div><span>Store</span></a></li>
-                        <li class="m-0 p-0 "><a href="customer-login.html"><div data-icon="ei-user" data-size="s"></div><span>Log in</span></a></li>
+                        <li class="m-0 p-0"><a href="muji-global.html"><div data-icon="ei-location" data-size="s"></div><span>Store</span></a></li>
+                        <li class="m-0 p-0"><button class="login-btn w-100" data-target="#login-modal" data-toggle="modal"><div data-icon="ei-user" data-size="s"></div><span>Log in</span></button></li>
                         <li class="m-0 p-0"><a href="cart-details.html"><div data-icon="ei-cart" data-size="s"></div><span>View cart</span></a></li>
                     </ul>
             </div>
@@ -592,7 +592,56 @@
     
     <!-- TOP 버튼 -->
     <a id="back-to-top" class="go-top" href="#"><div data-icon="ei-chevron-up"></div></a>
-    
+    <!-- 로그인 모달--> 
+    <div id="login-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog m-0" role="document">
+               <div class="login-wrapper container my-auto">
+                <div class="login-close-btn text-right">
+                    <button type="button" data-dismiss="modal">
+                        <div data-icon="ei-close"></div>
+                    </button>
+                </div>  
+                <div class="login-header d-flex justify-content-between">
+                    <h6 class="text-muted">로그인</h6>
+                    <a href="#"><h6>회원가입</h6></a>
+                </div>
+                <div class="login-form">
+                    <div class="form-group">
+                        <label for="id">
+                            아이디 또는 이메일 
+                        </label>
+                        <input id="id" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">
+                            비밀번호
+                        </label>
+                        <input id="password" type="password" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="login-submit">
+                            로그인
+                        </button>
+                    </div>
+                </div>
+                <div class="login-links d-flex justify-content-between">
+                   <div>
+                       <a class="find-id mr-2" href="#">아이디 찾기</a>
+                       <a class="find-pw" href="#">비밀번호 찾기</a>
+                   </div>
+                   <a class="l-p-join" href="#">L.POINT 회원가입</a>
+                </div>
+                <div class="login-text">
+                    <ul class="p-0 m-0">
+                        <li>L.POINT 회원인 경우 L.POINT 회원 아이디와 패스워드로 로그인이 가능합니다.</li>   
+                        <li>무지 온라인스토어에서는 롯데 e커머스가 주문과 회원서비스를 안전하게 제공합니다.</li>
+                        <li>L.POINT 회원에 가입하시면 보다 다양한 혜택과 편리한 쇼핑을 즐기실 수 있습니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 로그인 모달 끝-->
     <!-- 검색창 모달--> 
     <div id="srch-modal" class="modal fade" tabindex="-1" role="dialog">
         <div class="modal-dialog m-0 w-100" role="document">
