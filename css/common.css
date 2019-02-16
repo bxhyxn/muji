@@ -290,6 +290,9 @@ header {
     .category-sm {
         margin-bottom: -20px !important;
     }
+    .category-sm>li {
+        width:33.3%;
+    }
     .category-sm .icon{
     margin-top: 8px;    
 }

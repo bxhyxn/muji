@@ -30,11 +30,6 @@ button:focus {
     text-shadow: 1px 1px 1px gray;
 }
 
-.icon--ei-arrow-right {
-    width: 1rem;
-    top: 0.53rem;
-}
-
 /***** 헤더 ******/
 header {
     background-color: rgba(255,255,255,0);
@@ -321,9 +316,6 @@ header {
     .category-sm {
         margin-bottom: -20px !important;
     }
-    .category-sm>li {
-        width:33.3%;
-    }
     .category-sm .icon{
     margin-top: 8px;    
 }
@@ -363,220 +355,8 @@ header {
         margin: 20px 0;
 } 
 
-/* 메인 비주얼 영역 */
-.banner-slider {
-    margin-top: -123px;
-}
-.home-full-slider-wrapper {
-    min-height:600px;
-}
-@media (min-width: 768px) {
-    .home-full-slider-wrapper {height:100vh}
-}
-.home-full-slider {position:relative}
-.home-full-slider .home-full-item {
-    padding-top:125px;padding-bottom:62.5px;min-height:600px;height:auto
-}
-@media (min-width: 768px){
-    .home-full-slider .home-full-item{min-height:100vh}
-    .home-full-slider p.lead{font-size:1.215rem}
-}
-.banner-slider .carousel-caption {
-    top: 35%;
-}
-.banner-slider .carousel-caption p.lead {
-    margin: 1.2rem 0 3rem;
-    font-size: 1rem;
-}
-
-.banner-slider .carousel-caption .discover-btn {
-    display:inline-block;
-    margin:0;
-}
-.banner-slider .carousel-caption .discover-btn>a {
-    display: block; 
-    color:white; padding: 0.8rem 3rem;
-    font-size: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    border: 1px solid white;
-    background: linear-gradient(to right, white 50%, transparent 50%);
-    background-size: 220% 100%;
-    background-position: right bottom;
-    transition: all .5s ease;
-}
-.banner-slider .carousel-caption .discover-btn>a:hover {
-    background-position: left bottom;
-    color:black;
-}
-.banner-slider a:hover .icon {
-    fill:#7f0019;
-    opacity:0.6;
-}
-.bg-image{
-    position:absolute;top:0;left:0;width:100%;height:100%;z-index:0
-}
-img.bg-image{
-    -o-object-fit:cover;object-fit:cover;font-family:'object-fit: cover;'
-}
-
-
-
-/* BEST/NEW 아이템 영역 */
-.products-slider {margin-top:6rem !important;}
-
-.products-slider img{
-    width:100%;
-    min-width:90px;
-    max-width: 150px;
-    margin: 1rem 0;
-}
-.tab-title {
-    text-transform: uppercase;
-    font-size: .8rem;
-    color:#888;
-}
-.tab-title .nav-item a{
-    color:#888;
-}
-.tab-title .nav-item a.active{
-    color:#7f0019 !important;
-    font-weight: 500;
-}
-
-.tab-container .carousel-item {
-    margin:0;
-    padding-bottom: 15px;
-}
-.tab-container .carousel-indicators {
-    bottom:-15px;
-}
-.tab-container .carousel-indicators li {
-    background-color: #999;
-    width: 1rem;
-    }
-.tab-container .carousel-indicators .active {
-  background-color: #7f0019;
-}
-
-.items-wrapper {
-    margin:0;
-}
-.items-container {
-    display:flex;
-    justify-content: center;
-    width: 100%;
-    padding: 1rem 0.3rem;
-    margin-bottom: 1rem;
-    }
-.items-container a {
-    display: block;
-}
-.item-name {
-    margin:0;
-    max-width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    font-size: 0.8rem; 
-    text-align: center;
-}
-.item-price {
-    font-size: 0.7rem;
-    font-weight: 300;
-}
-
-/* MUJI STORY 영역 */
-.mujistory {margin-top:6rem;}
-
-.story-card-wrapper {
-    padding: 0 0.3rem;
-}
-.story-card {
-    padding: 0.3rem;
-}
-.card {
-    position: relative;
-    overflow: hidden;
-}
-.card img {
-    display: block;
-    border-radius: 0;
-    transition: all 1s ease;
-}
-.card:hover img {
-    transform: scale(1.2);
-    opacity: 0.4;
-}
-.card-img-overlay {
-    display: none;
-    height:25%; 
-    top:35%; padding:0;
-    transition: all 1s ease;
-}
-
-.card:hover .card-img-overlay {
-    display: block;
-}
-.card-img-overlay p {
-    margin:0;
-    font-size: 0.8rem;
-    font-weight: 500;
-    position: absolute;
-    text-align: center;
-    top:50%; left:-50%; right:-50%;
-    transform: translateY(-50%);
-}
-
-/* 퀵 메뉴 */
-.quick-menu {margin-top:6rem;}
-.quick-menu .q-icon-wrapper {
-    margin-top:3rem;
-}
-.quick-menu a{
-    display: block;
-    position: relative;
-    width: 14vw; max-width: 140px;
-    height: 14vw; max-height: 140px;
-    border-radius: 50%;
-    background-color: #eee;
-    transition: all 0.3s ease;
-}
-.quick-menu span {
-    display: block;
-    position: absolute;
-    width: 100%;
-    bottom:25%;
-    font-size: 0.8rem;
-    text-align: center;
-}
-.quick-menu a:hover{
-    background-color: #f8f8f8;
-}
-.quick-menu a:hover span{
-    color:#7f0019;
-}
-.quick-menu .icon {
-    position: absolute;
-    width: 5vw;
-    margin-top: auto; top:-20%; margin-bottom: auto; bottom:0;
-    margin-left: auto; margin-right: auto;
-    left:0; right:0;
-}
-@media (max-width: 576px){
-    .quick-menu span{
-        font-size: 0.6rem;
-        bottom:23%;
-    }
-    .quick-menu .icon {
-        top:-30%;
-    }
-}
-
-
 /* 푸터 영역 */
 footer {
-    margin-top:6rem;
     background-color: #f8f8f8;
     font-size: 0.65rem; 
 }
@@ -724,10 +504,4 @@ footer p{
 ::-webkit-scrollbar-track {background: transparent;}
 ::-webkit-scrollbar-thumb {background: #000;}
 ::-webkit-scrollbar-thumb:hover {background: #000;}
-
-
-
-
-
-
 

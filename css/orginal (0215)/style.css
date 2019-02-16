@@ -35,6 +35,11 @@ button:focus {
     top: 0.53rem;
 }
 
+section,footer {
+    margin-top: 6rem;
+}
+
+
 /***** 헤더 ******/
 header {
     background-color: rgba(255,255,255,0);
@@ -321,9 +326,6 @@ header {
     .category-sm {
         margin-bottom: -20px !important;
     }
-    .category-sm>li {
-        width:33.3%;
-    }
     .category-sm .icon{
     margin-top: 8px;    
 }
@@ -364,7 +366,7 @@ header {
 } 
 
 /* 메인 비주얼 영역 */
-.banner-slider {
+#banner-slider {
     margin-top: -123px;
 }
 .home-full-slider-wrapper {
@@ -381,19 +383,19 @@ header {
     .home-full-slider .home-full-item{min-height:100vh}
     .home-full-slider p.lead{font-size:1.215rem}
 }
-.banner-slider .carousel-caption {
+#banner-slider .carousel-caption {
     top: 35%;
 }
-.banner-slider .carousel-caption p.lead {
+#banner-slider .carousel-caption p.lead {
     margin: 1.2rem 0 3rem;
     font-size: 1rem;
 }
 
-.banner-slider .carousel-caption .discover-btn {
+#banner-slider .carousel-caption .discover-btn {
     display:inline-block;
     margin:0;
 }
-.banner-slider .carousel-caption .discover-btn>a {
+#banner-slider .carousel-caption .discover-btn>a {
     display: block; 
     color:white; padding: 0.8rem 3rem;
     font-size: 0.5rem;
@@ -405,11 +407,11 @@ header {
     background-position: right bottom;
     transition: all .5s ease;
 }
-.banner-slider .carousel-caption .discover-btn>a:hover {
+#banner-slider .carousel-caption .discover-btn>a:hover {
     background-position: left bottom;
     color:black;
 }
-.banner-slider a:hover .icon {
+#banner-slider a:hover .icon {
     fill:#7f0019;
     opacity:0.6;
 }
@@ -420,12 +422,8 @@ img.bg-image{
     -o-object-fit:cover;object-fit:cover;font-family:'object-fit: cover;'
 }
 
-
-
 /* BEST/NEW 아이템 영역 */
-.products-slider {margin-top:6rem !important;}
-
-.products-slider img{
+#products-slider img{
     width:100%;
     min-width:90px;
     max-width: 150px;
@@ -487,8 +485,6 @@ img.bg-image{
 }
 
 /* MUJI STORY 영역 */
-.mujistory {margin-top:6rem;}
-
 .story-card-wrapper {
     padding: 0 0.3rem;
 }
@@ -529,11 +525,10 @@ img.bg-image{
 }
 
 /* 퀵 메뉴 */
-.quick-menu {margin-top:6rem;}
-.quick-menu .q-icon-wrapper {
+#quick-menu .q-icon-wrapper {
     margin-top:3rem;
 }
-.quick-menu a{
+#quick-menu a{
     display: block;
     position: relative;
     width: 14vw; max-width: 140px;
@@ -542,7 +537,10 @@ img.bg-image{
     background-color: #eee;
     transition: all 0.3s ease;
 }
-.quick-menu span {
+#quick-menu a:hover{
+    background-color: #f8f8f8;
+}
+#quick-menu span {
     display: block;
     position: absolute;
     width: 100%;
@@ -550,13 +548,10 @@ img.bg-image{
     font-size: 0.8rem;
     text-align: center;
 }
-.quick-menu a:hover{
-    background-color: #f8f8f8;
-}
-.quick-menu a:hover span{
+#quick-menu a:hover span{
     color:#7f0019;
 }
-.quick-menu .icon {
+#quick-menu .icon {
     position: absolute;
     width: 5vw;
     margin-top: auto; top:-20%; margin-bottom: auto; bottom:0;
@@ -564,11 +559,11 @@ img.bg-image{
     left:0; right:0;
 }
 @media (max-width: 576px){
-    .quick-menu span{
+    #quick-menu span{
         font-size: 0.6rem;
         bottom:23%;
     }
-    .quick-menu .icon {
+    #quick-menu .icon {
         top:-30%;
     }
 }
@@ -576,7 +571,6 @@ img.bg-image{
 
 /* 푸터 영역 */
 footer {
-    margin-top:6rem;
     background-color: #f8f8f8;
     font-size: 0.65rem; 
 }
