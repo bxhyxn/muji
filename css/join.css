@@ -1,52 +1,61 @@
 @charset "utf-8";
 
 .join-wrapper {
+    padding: 5rem 0.7rem;
     max-width: 360px;
-    padding: 3rem 2.5rem;
-    font-size: 0.75rem;
+    font-size: 0.75rem; line-height: 1.5;
     border-radius: 0;
-    background-color: rgba(255,255,255,0.9);
 }
-.join-form {
-/*    border:1px solid red;*/
+.join-wrapper h5 {
+    font-size: 1rem;
 }
-.join-form ul{
+.join-wrapper h6{
+    font-size: 0.8rem;
+}
+.join-wrapper h6>a {
+    font-size: 0.7rem;
+    border-bottom: 1px solid #444;
 }
 
-.join-form li {
+/* 단계 목록 탭 */
+.join-forms .nav-tabs{
+    border:none;
+}
+.join-forms .nav-tabs li {
     font-size: 0.7rem;
-    width:33.333%; height: 35px; line-height: 35px;
+    width:33.333%; height: 40px; line-height: 40px;
     list-style: none;
     border:1px solid #d0d0d0;
     border-left:none;
     text-align: center;
     margin:0; padding:0;
-    background-color: #eee;
 }
-.join-form li:nth-child(1) {
+.join-forms .nav-tabs li:nth-child(1) {
     border-left: 1px solid #d0d0d0;
 }
-.join-form li a {
+.join-forms .nav-tabs li a {
+    display: block;
+    width: 100%; height: 100%;
+    color:#d0d0d0;
     margin: 0; padding: 0;
 }
-
-.join-form li a.active {
+.join-forms .nav-tabs li a.active {
     color:#7f0019;
+    background-color: #f0f0f0;
 }
 
-
-
-.form-control{
+/* 정보 입력 폼 설정 */
+.join-wrapper .form-control{
     background-color: rgba(0, 0, 0, 0.07);
     padding:0.4rem;
     border-bottom: 1px solid #eee;
     font-size: 0.7rem;
     font-weight: 400;
 }
-.form-control:focus {
+.join-wrapper .form-control:focus {
     border-bottom: 1px solid #7f0019;
 } 
-.login-submit {
+.join-wrapper .submit {
     margin: 0.5rem 0;
     width: 100%; padding:0.65rem;
     background-color: #777;
@@ -54,22 +63,54 @@
     text-align: center;
     letter-spacing: 0.1rem;
 }
-.login-submit:hover {
+.join-wrapper .submit:hover {
     background-color: #7f0019;
 }
-.login-links a{
-    border-bottom: 1px solid #444;
-}
-.login-links a:hover {
-     border-bottom: 1px solid #7f0019;
-}
-.login-text {
+
+/* join-1 본인인증 유의사항 */
+.join-wrapper .detail-list {
     margin-top: 1.5rem;
     font-size: 0.6rem;
     color: #777;
 }
-li {
+.join-wrapper .detail-list li {
     list-style-type: circle;
     padding: 0.1rem 0;
     margin-left:13px;
+}
+
+.join-wrapper .tab-pane {
+    padding: 0.5rem;   
+}
+
+.join-wrapper .go-index {
+    color:white;
+    background-color: #444;
+    height:40px; line-height: 40px; 
+    letter-spacing: 0.1rem;
+}
+
+.join-wrapper .go-index:hover {
+    background-color: #7f0019;
+}
+
+
+/* 라디오 버튼 설정 */
+.custom-radio .custom-control-label {
+    text-indent: 0.3rem;
+    margin-top: 2.5px;
+}
+.custom-radio .custom-control-label::before {
+    background-color: rgba(0, 0, 0, 0.07); 
+}
+.custom-radio .custom-control-input:checked~.custom-control-label::before,
+.custom-radio .custom-control-input:checked~.custom-control-label::after {
+    background-color: #7f0019; 
+    border-radius: 50%;
+}
+.custom-radio .custom-control-input:active ~ .custom-control-label::before {
+    background-color: rgba(0, 0, 0, 0.07); 
+}
+.custom-radio .custom-control-input:focus ~ .custom-control-label::before {
+    box-shadow: none; 
 }

@@ -56,6 +56,7 @@ button:focus {
 /***** 헤더 ******/
 header {
     background-color: rgba(255,255,255,0);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
     font-size: 0.75rem;
     transition: all 0.5s ease;
 }
@@ -239,16 +240,10 @@ header {
 @media (max-width: 991px) {
     .navbar-collapse {
         position: absolute;
-        width: 200px;
-        top: 100%;
         padding: 15px;
         width: 100%;
-        transition: all 0.3s ease-in;
-    }
-    .navbar-collapse.collapsing {
-        height: auto !important;
-        transition: all 0.2s ease;
-        top: 0%;
+        top: 100%;
+        transition: all 0.4s ease;
     }
     .navbar-collapse.show {
         top:100%;
@@ -283,7 +278,7 @@ header {
         left:0; right:0;
         margin:0;
         text-indent: 3rem;
-        background-color: rgba(0,0,0,0.04);
+        background-color: rgba(0,0,0,0.08);
         box-shadow: none;
         padding:0;
     }
@@ -297,7 +292,7 @@ header {
     }
     .category .dropdown-menu>li>a:hover {
         padding: 0.8rem 0;
-        background-color: rgba(0, 0, 0, 0.06);
+        background-color: rgba(0, 0, 0, 0.1);
     }
     
     .category-sm {
@@ -315,6 +310,7 @@ header {
     }
     .category-sm span {
         display: block;
+        color:#444;
         margin-top:-5px;
         padding-bottom: 10px;
     }
@@ -331,7 +327,7 @@ header {
 /* 헤더 전체 - 스크롤 다운 시 세로 줄어들게 설정 */
 .top-nav-wrapper.compressed {
     background-color: rgba(255,255,255,0.9);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
         }
 .top-nav-wrapper.compressed .topbar-logo img {
     width:60%; max-width:130px;
@@ -340,8 +336,8 @@ header {
 
 /* 푸터 영역 */
 footer  {
+    margin-top:3rem;
     background-color: #fff;
-    margin-top: 6rem;
     background-color: #f8f8f8;
     font-size: 0.65rem; 
 }
@@ -526,23 +522,31 @@ footer p{
     width:100vw;
 }
 #srch-modal .modal-dialog {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) !important;
     max-width:100%;
-    margin: 0 auto;
+    width:100vw;
+    pointer-events:auto; 
 }
 #srch-modal .modal-content {
-    width:100vw;
-    height: 100vh;
-    margin: 0 auto;
+    position: relative;
+    max-width: 500px;
+    padding: 4.5rem 2.5rem 3.5rem;
+    font-size: 0.75rem;
     border-radius: 0;
-    border:0;
     background-color: rgba(255,255,255,0.9);
+}
+#srch-modal .srch-close-btn {
+    position: absolute;
+    top:5px; right:0; 
 }
 #srch-modal .modal-content .submit-btn {
     height:30px;
     margin: 2px 0 0 -40px;
 }
 #srch-modal .form-group {
-    width:80%;
+    width:90%;
     max-width: 500px;
 }
 /* 스크롤바 설정 */

@@ -1,9 +1,11 @@
 @charset "utf-8";
 
 /***** 헤더 ******/
-
+header {
+    box-shadow: none;
+}
 .topbar a, .icon {
-    color:black;
+    color:#444;
 }
 
 /* 헤더에 마우스 올렸을 때 텍스트 색상 흰색에서 검정색 */
@@ -13,11 +15,11 @@
 }
 .top-nav-wrapper:hover .topbar a,
 .top-nav-wrapper.hover .topbar a{
-    color:black;
+    color:#444;
 }
 .top-nav-wrapper:hover .topbar .icon,
 .top-nav-wrapper.hover .topbar .icon{
-    color:black;
+    color:#444;
 }
 .top-nav-wrapper:hover .topbar .icon:hover,
 .top-nav-wrapper:hover .topbar .icon:focus,
@@ -26,10 +28,10 @@
     color:#7f0019;
 }
 .top-nav-wrapper:hover .topbar .srch-btn,
-.top-nav-wrapper.hover .topbar .srch-btn {color:black;}
+.top-nav-wrapper.hover .topbar .srch-btn {color:#444;}
 .top-nav-wrapper:hover .category li.dropdown>a,
 .top-nav-wrapper.hover .category li.dropdown>a{
-    color:black;
+    color:#444;
 }
 .top-nav-wrapper:hover .category li.dropdown:hover>a,
 .top-nav-wrapper.hover .category li.dropdown:hover>a{
@@ -44,18 +46,18 @@
 
 /* 헤더 - 내비게이션(카테고리) 영역 */
 .category li.dropdown>a {
-    color:black;
+    color:#444;
 }
 
 /* 헤더 전체 - 스크롤 다운 시 세로 줄어들게 설정 */
 .top-nav-wrapper.compressed .icon{
-    color:black;
+    color:#444;
 }
 .top-nav-wrapper.compressed .topbar a:hover{
     color:#7f0019;
 }
 .top-nav-wrapper.compressed .category li.dropdown>a{
-    color:black;
+    color:#444;
 }
 .top-nav-wrapper.compressed .category li.dropdown:hover>a{
     color:#7f0019;
@@ -104,7 +106,13 @@
 }
 .banner-slider .carousel-caption .discover-btn>a:hover {
     background-position: left bottom;
-    color:black;
+    color:#444;
+}
+.banner-slider .carousel-control-prev .icon{
+    fill:#fff;
+}
+.banner-slider .carousel-control-next .icon{
+    fill:#fff;
 }
 .banner-slider a:hover .icon {
     fill:#7f0019;
@@ -250,9 +258,11 @@ img.bg-image{
 .quick-menu a:hover{
     background-color: #f8f8f8;
 }
-.quick-menu a:hover span{
+.quick-menu a:hover span,
+.quick-menu a:hover .icon{
     color:#7f0019;
 }
+
 .quick-menu .icon {
     position: absolute;
     width: 5vw;
@@ -268,5 +278,9 @@ img.bg-image{
     .quick-menu .icon {
         top:-30%;
     }
+}
+
+footer{
+    margin-top: 6rem;
 }
 
