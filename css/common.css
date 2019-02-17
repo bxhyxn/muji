@@ -448,7 +448,7 @@ footer p{
     width:100vw;
     pointer-events:auto; 
 }
-#login-modal .login-wrapper {
+.login-wrapper {
     position: relative;
     max-width: 360px;
     padding: 3rem 2.5rem;
@@ -456,36 +456,36 @@ footer p{
     border-radius: 0;
     background-color: rgba(255,255,255,0.9);
 }
-#login-modal .login-close-btn {
+.login-wrapper .login-close-btn {
     position: absolute;
     top:5px; right:0; 
 }
-#login-modal .icon {
+.login-wrapper .icon {
     fill:#999;
 }
-#login-modal .icon:hover {
+.login-wrapper .icon:hover {
     fill:#7f0019;
 }
-#login-modal h6 {
+.login-wrapper h6 {
     font-size: 0.8rem;
 }
-#login-modal .login-header {
+.login-wrapper .login-header {
     border-bottom: 1px solid #999;
 }
-#login-modal .login-form {
+.login-wrapper .login-form {
     margin-top:3rem;
 }
-#login-modal .form-control{
+.login-wrapper .form-control{
     background-color: rgba(0, 0, 0, 0.07);
     padding:0.4rem;
     border-bottom: 1px solid #eee;
     font-size: 0.7rem;
     font-weight: 400;
 }
-#login-modal .form-control:focus {
+.login-wrapper .form-control:focus {
     border-bottom: 1px solid #7f0019;
 } 
-#login-modal .login-submit {
+.login-wrapper .login-submit {
     margin: 0.5rem 0;
     width: 100%; padding:0.65rem;
     background-color: #777;
@@ -493,21 +493,21 @@ footer p{
     text-align: center;
     letter-spacing: 0.1rem;
 }
-#login-modal .login-submit:hover {
+.login-wrapper .login-submit:hover {
     background-color: #7f0019;
 }
-#login-modal .login-links a{
+.login-wrapper .login-links a{
     border-bottom: 1px solid #444;
 }
-#login-modal .login-links a:hover {
+.login-wrapper .login-links a:hover {
      border-bottom: 1px solid #7f0019;
 }
-#login-modal .login-text {
+.login-wrapper .login-text {
     margin-top: 1.5rem;
     font-size: 0.6rem;
     color: #777;
 }
-#login-modal li {
+.login-wrapper li {
     list-style-type: circle;
     padding: 0.1rem 0;
     margin-left:13px;
@@ -647,6 +647,7 @@ footer p{
     }
     .cate-now .subcate .active a{
         color:#7f0019;
+        border-bottom: 1px solid #7f0019;
     }
     
     .cont-section {
