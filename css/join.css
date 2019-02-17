@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 .join-wrapper {
-    padding: 1rem 0.7rem;
+    padding: 0 0.7rem 1rem;
     max-width: 360px;
     font-size: 0.75rem; line-height: 1.5;
     border-radius: 0;
