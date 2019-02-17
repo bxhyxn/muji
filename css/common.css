@@ -124,20 +124,6 @@ header {
 .srch-btn:hover {
     color:#7f0019;
 }
-.topbar-cart-icon .badge {
-    background-color: #7f0019;
-    border-radius: 20px;
-    color:#fff;
-    font-size: 0.3rem;
-    position: relative;
-    top:-1rem;
-    right: 0.5rem;
-    margin-right:-0.5rem;
-}
-.topbar-cart-icon:hover .badge {
-    background-color: #7f0019;
-}
-
 .cart-dropdown {
     width:300px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
@@ -530,18 +516,20 @@ footer p{
 #srch-modal .modal-dialog {
     top: 50%;
     left: 50%;
-    max-width: 100vw;
     transform: translate(-50%, -50%) !important;
+    max-width:100%;
+    width:100vw;
+    
     pointer-events:auto; 
 }
 #srch-modal .modal-content {
     position: relative;
-    width: 100vw;
-    height:100vh;
-    padding: 4.5rem 2.5rem 3.5rem;
+    width:85vw;
+    height: 60vh;
+    max-width: 600px;
+    padding: 3rem 2.5rem;
     font-size: 0.75rem;
     border-radius: 0;
-    border:none;
     background-color: rgba(255,255,255,0.9);
 }
 #srch-modal .srch-close-btn {

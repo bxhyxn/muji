@@ -430,7 +430,7 @@
     <!-- 검색창 모달--> 
     <div id="srch-modal" class="modal p-0 fade" tabindex="-1" role="dialog">
         <div class="modal-dialog m-0 w-100" role="document">
-           <div class="modal-content">
+           <div class="modal-content container">
                 <div class="srch-close-btn">
                     <button type="button" class="m-1" data-dismiss="modal">
                         <div data-icon="ei-close"></div>
@@ -490,7 +490,9 @@
     }
     });
         
-    
+    $("body").ready(function(){
+      $("body").css({"opacity":"1"});
+    });
     </script>
 </body>
 </html>
