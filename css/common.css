@@ -59,6 +59,7 @@ header {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
     font-size: 0.75rem;
     transition: all 0.5s ease;
+    margin-bottom: 3rem;
 }
 .topbar a, .icon{
     color:#444;
@@ -550,12 +551,105 @@ footer p{
     max-width: 500px;
 }
 /* 스크롤바 설정 */
-::-webkit-scrollbar {width: 5px;}
+::-webkit-scrollbar {width: 5px; height:2px;}
 ::-webkit-scrollbar-track {background: transparent;}
 ::-webkit-scrollbar-thumb {background: #444;}
 ::-webkit-scrollbar-thumb:hover {background: #444;}
 
+::-webkit-scrollbar-thumb:horizontal {
+    background-color:#d0d0d0;
+}
+::-webkit-scrollbar-thumb:horizontal:hover{
+    background-color:#aaa;
+}
+
+
+/* 페이지 레이아웃 기본 설정 */
+
+.cate-now {
+    padding-left: 1.5rem;
+}
+.cate-now h5 {
+    padding-bottom: 1rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.1rem;
+}
+.cate-now .subcate li {
+    padding:0.2rem 1rem !important; 
+    max-width: 150px
+}
+.cate-now .subcate li a{
+    font-size: 0.7rem;
+    line-height: 2;
+    color: #aaa;
+}
+.cate-now .subcate li:hover a {
+    color: #7f0019;
+}
+.cate-now .subcate .active a{
+    color:#7f0019;
+    border-bottom: 1px solid #7f0019;
+}
 
 
 
+.cont-section {
+    padding-left: 1.5rem;
+    
+/*
+    border:1px solid black;
+    background-color: #f8f8f8;
+*/
+    height:1000px;
+    
+}
 
+@media (max-width: 991px) {
+    .cate-cont-wrapper {
+        margin-top:-1.5rem !important;
+    }
+    .cate-now {
+        padding:0 1rem;
+        margin-bottom: 0.5rem !important;
+    }
+    .cate-now h5 {
+        text-align: center;
+        margin-bottom: 0.2rem;
+    }
+    .cate-now .subcate{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        overflow-x:scroll;
+        padding-bottom: 0.7rem !important;
+    }
+
+    .cate-now .subcate li {
+        width: 100%;
+        text-align: center;
+        min-width: 85px;
+        padding: 0 0 0 0 !important;
+    }
+    .cate-now .subcate li a{
+        display: inline-block;
+        text-align: center;
+        font-size: 0.65rem;
+        text-align: center;
+        padding: 0 0 0 0 !important;
+    }
+    .cate-now .subcate li:hover {
+    }
+    .cate-now .subcate li:hover a {
+        color: #7f0019;
+        padding: 0 0 0 0 !important;
+    }
+    .cate-now .subcate .active a{
+        color:#7f0019;
+    }
+    
+    .cont-section {
+        padding-left: 0.9rem;
+    }
+    
+}
