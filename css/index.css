@@ -4,9 +4,6 @@
 header {
     box-shadow: none;
 }
-.topbar a, .icon {
-    color:#444;
-}
 
 /* 헤더에 마우스 올렸을 때 텍스트 색상 흰색에서 검정색 */
 .top-nav-wrapper:hover,
@@ -62,6 +59,18 @@ header {
 .top-nav-wrapper.compressed .category li.dropdown:hover>a{
     color:#7f0019;
 }
+
+/* 헤더 드롭다운 */
+
+.cart-btn .view-btn a:hover {
+    color:#7f0019;
+    border-bottom: 1px solid #7f0019;
+}
+
+.cart-btn .chkout-btn:hover a {
+    color:white;
+}
+
 /* 메인 비주얼 영역 */
 .banner-slider {
     margin-top: -123px;

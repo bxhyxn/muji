@@ -171,9 +171,6 @@ header {
 .cart-btn {
     margin: 0 0.2rem;
 }
-.cart-btn a {
-    color:#444;
-}
 .cart-btn .view-btn{
     padding: 0.4rem 0;
 }
@@ -305,12 +302,13 @@ header {
         margin-top: 8px;    
     }
     .category-sm a {
-        display: block;
+        display: block; 
         margin: 0;
     }
     .category-sm span {
         display: block;
         color:#444;
+        font-size: 0.65rem;
         margin-top:-5px;
         padding-bottom: 10px;
     }
@@ -520,18 +518,21 @@ footer p{
 }
 #srch-modal .modal {
     width:100vw;
+    height:100vh;
 }
 #srch-modal .modal-dialog {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) !important;
     max-width:100%;
-    width:100vw;
+    width:100vw; 
     pointer-events:auto; 
 }
 #srch-modal .modal-content {
     position: relative;
-    max-width: 500px;
+    width: 50vw;
+    min-width: 500px;
+    height:60vh;
     padding: 4.5rem 2.5rem 3.5rem;
     font-size: 0.75rem;
     border-radius: 0;
