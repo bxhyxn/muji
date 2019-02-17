@@ -3,6 +3,7 @@
 /***** 헤더 ******/
 header {
     box-shadow: none;
+    margin-bottom:0;
 }
 
 /* 헤더에 마우스 올렸을 때 텍스트 색상 흰색에서 검정색 */
