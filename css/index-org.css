@@ -1,21 +1,79 @@
+@charset "utf-8";
+body{
+    opacity:0;
+    transition: all 1s ease;
+}
+/***** 헤더 ******/
 header {
-    background-color: transparent;
+    box-shadow: none;
+    margin-bottom: 0;
 }
 
-.topbar-left .nav-tabs-wrapper a,
-.topbar-right>a,
-.cate-open-btn {
-    color:#fff;
+/* 헤더에 마우스 올렸을 때 텍스트 색상 흰색에서 검정색 */
+.top-nav-wrapper:hover,
+.top-nav-wrapper.hover {
+    background-color: rgba(255,255,255,0.95);
 }
-.topbar-left .nav-tabs-wrapper.text-333 a,
-.nav-tabs-wrapper.tabs-in-sidebar a{
-    color:#888;
-    animation: all 1s;
+.top-nav-wrapper:hover .topbar a,
+.top-nav-wrapper.hover .topbar a{
+    color:#444;
 }
-.topbar-left .nav-tabs-wrapper.text-333 a:hover{
+.top-nav-wrapper:hover .topbar .icon,
+.top-nav-wrapper.hover .topbar .icon{
+    color:#444;
+}
+.top-nav-wrapper:hover .topbar .icon:hover,
+.top-nav-wrapper:hover .topbar .icon:focus,
+.top-nav-wrapper.hover .topbar .icon:hover,
+.top-nav-wrapper.hover .topbar .icon:focus {
+    color:#7f0019;
+}
+.top-nav-wrapper:hover .topbar .srch-btn,
+.top-nav-wrapper.hover .topbar .srch-btn {color:#444;}
+.top-nav-wrapper:hover .category li.dropdown>a,
+.top-nav-wrapper.hover .category li.dropdown>a{
+    color:#444;
+}
+.top-nav-wrapper:hover .category li.dropdown:hover>a,
+.top-nav-wrapper.hover .category li.dropdown:hover>a{
     color:#7f0019;
 }
 
+@media (min-width: 992px) {
+    nav .dropdown:hover>.dropdown-menu {
+      display: block;
+    }
+}
+
+/* 헤더 - 내비게이션(카테고리) 영역 */
+.category li.dropdown>a {
+    color:#444;
+}
+
+/* 헤더 전체 - 스크롤 다운 시 세로 줄어들게 설정 */
+.top-nav-wrapper.compressed .icon{
+    color:#444;
+}
+.top-nav-wrapper.compressed .topbar a:hover{
+    color:#7f0019;
+}
+.top-nav-wrapper.compressed .category li.dropdown>a{
+    color:#444;
+}
+.top-nav-wrapper.compressed .category li.dropdown:hover>a{
+    color:#7f0019;
+}
+
+/* 헤더 드롭다운 */
+
+.cart-btn .view-btn a:hover {
+    color:#7f0019;
+    border-bottom: 1px solid #7f0019;
+}
+
+.cart-btn .chkout-btn:hover a {
+    color:white;
+}
 
 /* 메인 비주얼 영역 */
 .banner-slider {
@@ -29,7 +87,7 @@ header {
 }
 .home-full-slider {position:relative}
 .home-full-slider .home-full-item {
-    padding-top:125px;padding-bottom:62.5px;min-height:600px;height:auto;
+    padding-top:125px;padding-bottom:62.5px;min-height:600px;height:auto
 }
 @media (min-width: 768px){
     .home-full-slider .home-full-item{min-height:100vh}
@@ -65,11 +123,9 @@ header {
 }
 .banner-slider .carousel-control-prev .icon{
     fill:#fff;
-    width:90px;
 }
 .banner-slider .carousel-control-next .icon{
     fill:#fff;
-    width:90px;
 }
 .banner-slider a:hover .icon {
     fill:#7f0019;
@@ -189,3 +245,55 @@ img.bg-image{
     top:50%; left:-50%; right:-50%;
     transform: translateY(-50%);
 }
+
+/* 퀵 메뉴 */
+.quick-menu {margin-top:6rem;}
+.quick-menu .q-icon-wrapper {
+    margin-top:3rem;
+}
+.quick-menu a{
+    display: block;
+    position: relative;
+    width: 14vw; max-width: 140px;
+    height: 14vw; max-height: 140px;
+    border-radius: 50%;
+    background-color: #eee;
+    transition: all 0.3s ease;
+}
+.quick-menu span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom:25%;
+    font-size: 0.8rem;
+    text-align: center;
+}
+.quick-menu a:hover{
+    background-color: #f8f8f8;
+}
+.quick-menu a:hover span,
+.quick-menu a:hover .icon{
+    color:#7f0019;
+}
+
+.quick-menu .icon {
+    position: absolute;
+    width: 5vw;
+    margin-top: auto; top:-20%; margin-bottom: auto; bottom:0;
+    margin-left: auto; margin-right: auto;
+    left:0; right:0;
+}
+@media (max-width: 576px){
+    .quick-menu span{
+        font-size: 0.6rem;
+        bottom:23%;
+    }
+    .quick-menu .icon {
+        top:-30%;
+    }
+}
+
+footer{
+    margin-top: 6rem;
+}
+
