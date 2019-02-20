@@ -38,11 +38,11 @@ $(document).ready(function(){
     
     $(window).on("scroll", function() {
             if ($(window).scrollTop() >= 20) {
-                $(".top-nav-wrapper").addClass("compressed"),
+                $("header").addClass("compressed"),
                 $('.go-top').addClass("show");
             }
             else { 
-                $(".top-nav-wrapper").removeClass("compressed"),
+                $("header").removeClass("compressed"),
                 $('.go-top').removeClass("show");
             }
     });

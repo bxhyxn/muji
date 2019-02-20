@@ -1,165 +1,317 @@
 header {
-    background-color: transparent;
+    
+    background-color: rgba(0,0,0,0);
 }
 
+/*
 .topbar-left .nav-tabs-wrapper a,
-.topbar-right>a,
-.cate-open-btn {
+.cate-open-btn,
+*/
+.topbar-right>a{
     color:#fff;
 }
+/*
 .topbar-left .nav-tabs-wrapper.text-333 a,
 .nav-tabs-wrapper.tabs-in-sidebar a{
     color:#888;
     animation: all 1s;
 }
+*/
 .topbar-left .nav-tabs-wrapper.text-333 a:hover{
     color:#7f0019;
 }
 
 
+header.compressed .topbar-left .nav-item>a,
+header.compressed .topbar-right .nav-item,
+header.compressed .topbar-right .icon {
+    color:#333;
+}
+
+header.compressed .topbar-left .nav-item>a:hover,
+header.compressed .topbar-right .nav-item:hover,
+header.compressed .topbar-right .icon:hover {
+    color:#7f0019;
+}
+
 /* 메인 비주얼 영역 */
 .banner-slider {
-    margin-top: -78px;
+    margin-top: -78px; 
 }
 .home-full-slider-wrapper {
-    min-height:600px;
+    min-height:700px;
 }
 @media (min-width: 768px) {
     .home-full-slider-wrapper {height:100vh}
 }
 .home-full-slider {position:relative}
 .home-full-slider .home-full-item {
-    padding-top:125px;padding-bottom:62.5px;min-height:600px;height:auto;
+    min-height:700px;height:auto;
 }
 @media (min-width: 768px){
     .home-full-slider .home-full-item{min-height:100vh}
-    .home-full-slider p.lead{font-size:1.215rem}
 }
 .banner-slider .carousel-caption {
-    top: 35%;
+    left:0; bottom:0;
+    width: 40%; height:70%;
+    padding:0 8%;
+    color:#333;
+    text-align: left;
 }
 .banner-slider .carousel-caption p.lead {
-    margin: 1.2rem 0 3rem;
-    font-size: 1rem;
+    margin: 1rem 0 3rem;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    padding-top: 1.5rem;
+    border-top: 2px solid #333;
 }
+.banner-slider .carousel-control-prev,
+.banner-slider .carousel-control-next{
+    display: none;}
+/*
 
-.banner-slider .carousel-caption .discover-btn {
-    display:inline-block;
-    margin:0;
+.banner-slider .carousel-control-prev,
+.banner-slider .carousel-control-next{
+    display: none;
+    width:50px;
+    height:100px; 
+    top:90%; 
 }
-.banner-slider .carousel-caption .discover-btn>a {
-    display: block; 
-    color:white; padding: 0.8rem 3rem;
-    font-size: 0.5rem;
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    border: 1px solid white;
-    background: linear-gradient(to right, white 50%, transparent 50%);
-    background-size: 220% 100%;
-    background-position: right bottom;
-    transition: all .5s ease;
+.banner-slider .carousel-control-prev {
+    left:calc(12% + 1.3rem);
 }
-.banner-slider .carousel-caption .discover-btn>a:hover {
-    background-position: left bottom;
-    color:#444;
+.banner-slider .carousel-control-next{
+    right:calc(63% + 1.3rem);
 }
-.banner-slider .carousel-control-prev .icon{
-    fill:#fff;
-    width:90px;
-}
+.banner-slider .carousel-control-prev .icon, 
 .banner-slider .carousel-control-next .icon{
-    fill:#fff;
-    width:90px;
+    fill:#333;
+    width:50px;
 }
-.banner-slider a:hover .icon {
+.banner-slider .carousel-control-prev .icon:hover, 
+.banner-slider .carousel-control-next .icon:hover {
     fill:#7f0019;
     opacity:0.6;
 }
-.bg-image{
-    position:absolute;top:0;left:0;width:100%;height:100%;z-index:0
+*/
+.banner-slider .carousel-indicators {
+    justify-content: flex-start;
+    width:40%; height:75%;
+    padding-left: calc(8% + 2px);
+    bottom:0;
+    margin: 0;
+    
 }
-img.bg-image{
-    -o-object-fit:cover;object-fit:cover;font-family:'object-fit: cover;'
+.banner-slider .carousel-indicators li {
+    background-color: #d0d0d0;
+    width: 7px;
+    height: 7px;
+    margin-left:0;
+    margin-right: 7px;
+    
+}
+.banner-slider .carousel-indicators li.active {
+    background-color: #7f0019;
+}
+.img-frame {
+    position: absolute;top:0;right:0;width:60%;height:100%; z-index: 0;
+}
+.img-frame img{
+    width: 100%;
+    height:100%;
+    object-fit: cover;
+    object-position: center;
+}
+.img-frame img.bg-img {
+/*    object-fit: cover;*/
+/*    width: 100%; height: 100%;*/
+}
+.img-frame img.bg-img{
+/*    -o-object-fit:cover;object-fit:cover;font-family:'object-fit: cover;';*/
 }
 
 
+
+@media (max-width: 767px) {
+    .home-full-slider .home-full-item {
+        padding: 0;
+        height:850px;
+/*        border:1px solid red;*/
+    }
+    .img-frame {
+        position: relative;
+        right:0; width:100%; 
+    }
+    .img-frame img {
+        height:500px !important; width:100%;
+    }
+    .banner-slider .carousel-caption{
+        position: absolute;
+        bottom:0; left:0;
+        width: 100%; height:40%;
+        padding-top: 10%;
+        padding-left: 20%;
+        padding-right: 20%;
+/*        border:1px solid blue;*/
+        background-color: rgba(247,246,243,0.4);
+    }
+    .banner-slider .carousel-caption h4{
+/*        font-size: 1.2rem;*/
+    }
+    .banner-slider .carousel-caption p.lead {
+        font-size: 0.8rem;
+        line-height: 1.7;
+    }
+    .banner-slider .carousel-caption .discover-btn {
+        width: 9rem; height:2.5rem;
+    }
+    .banner-slider .carousel-caption .discover-btn>a {
+        font-size: 0.65rem;
+        line-height: 2.5rem;
+        text-indent: 1rem;
+    }
+    .banner-slider .carousel-caption .discover-btn>a::after {
+        left:8rem
+    }
+    .banner-slider .carousel-indicators {
+        justify-content: center;
+        width:100%; height:40%;
+        left:0;
+        bottom: 0;
+    }
+}
+@media (max-width: 575px) {
+    .banner-slider .carousel-caption{
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
+section h6{
+    font-size: 0.9rem;
+}
 
 /* BEST/NEW 아이템 영역 */
-.products-slider {margin-top:6rem !important;}
-
+.products-slider {
+    margin-top:5rem ;
+}
+.products-slider .carousel {
+    margin-bottom: 3rem;
+}
 .products-slider img{
     width:100%;
     min-width:90px;
-    max-width: 150px;
-    margin: 1rem 0;
+    max-width: 130px;
+    margin-bottom: 0.5rem;
 }
-.tab-title {
-    text-transform: uppercase;
-    font-size: .8rem;
-    color:#888;
+.products-slider .item-container {
+    padding: 1rem 0.2rem;
 }
-.tab-title .nav-item a{
-    color:#888;
-}
-.tab-title .nav-item a.active{
-    color:#7f0019 !important;
-    font-weight: 500;
-}
-
-.tab-container .carousel-item {
-    margin:0;
-    padding-bottom: 15px;
-}
-.tab-container .carousel-indicators {
-    bottom:-15px;
-}
-.tab-container .carousel-indicators li {
-    background-color: #999;
-    width: 1rem;
-    }
-.tab-container .carousel-indicators .active {
-  background-color: #7f0019;
-}
-
-.items-wrapper {
-    margin:0;
-}
-.items-container {
-    display:flex;
-    justify-content: center;
-    width: 100%;
-    padding: 1rem 0.3rem;
+.products-slider .item-container li {
+    width:130px !important;
+    padding:1rem;
     margin-bottom: 1rem;
-    }
-.items-container a {
-    display: block;
+    background-color: #fff;
 }
-.item-name {
-    margin:0;
+.products-slider .item-container li>a{
+    display: block; width: 100%; height: 100%;
+}
+
+.products-slider .item-container li p {
+    margin: 0;
+}
+
+.products-slider .item-container a:hover {
+    color:#7f0019;
+}
+.products-slider .item-name {
     max-width: 200px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    font-size: 0.8rem; 
     text-align: center;
 }
-.item-price {
-    font-size: 0.7rem;
+.products-slider .item-price {
+    font-size: 0.6rem;
     font-weight: 300;
 }
-
-/* MUJI STORY 영역 */
-.mujistory {margin-top:6rem;}
-
-.story-card-wrapper {
-    padding: 0 0.3rem;
+.products-slider .carousel-indicators {
+    bottom:-0.3rem;
 }
-.story-card {
-    padding: 0.3rem;
+.products-slider .carousel-indicators li {
+    width: 1rem;
+    background-color: #d0d0d0;
 }
+.products-slider .carousel-indicators li.active {
+    background-color: #7f0019;
+}
+
+/* What is MUJI 영역*/
+.brand-story {
+    margin-top: 5rem;
+/*    border:1px solid black;*/
+}
+.brand-story .text-container {
+    padding-left: 8%;
+    padding-right: 5%;
+    width: 45%;
+}
+.brand-story h4 {
+    font-size: 0.75rem;
+    font-weight: 300;
+    color: #777;
+}
+.brand-story h6 {
+    font-size: 1.5rem;    
+}
+.brand-story p {
+    margin-top: 2rem;
+    font-size: 0.85rem;
+    line-height: 1.7;
+    font-weight: 300;
+    
+}
+.brand-story-img {
+/*    border:1px solid red;*/
+    width: 100%;  !important;
+    overflow: hidden;
+}
+.brand-story-img>img{
+    width: 100%; height:100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+@media (max-width: 767px) {
+    .brand-story {
+        flex-direction: column;
+    }
+    .brand-story .text-container {
+        width: 100%;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+    .brand-story .brand-story-img,
+    .brand-story .text-container {
+        margin-top: 2rem;
+/*        padding-left: 8%;*/
+        
+    }
+    .brand-story.what-is-muji .brand-story-img,
+    .brand-story.mujistory-all .brand-story-img{
+        order:2;
+    }
+    .brand-story.what-is-muji .text-container,
+    .brand-story.mujistory-all .text-container{
+        order:1;
+    }
+}
+/* MUJI STORY 카드 영역 */
 .card {
     position: relative;
     overflow: hidden;
+    border-radius: 0;
+    border:none;
 }
 .card img {
     display: block;
@@ -176,9 +328,9 @@ img.bg-image{
     top:35%; padding:0;
     transition: all 1s ease;
 }
-
 .card:hover .card-img-overlay {
     display: block;
+    color:#7f0019;
 }
 .card-img-overlay p {
     margin:0;

@@ -6,20 +6,19 @@ body {
     font-size: 0.7rem;
     color:#333;
     padding:0 !important;
+    background-color: #f7f6f3;
 }
+
 a, button {
     color:#333;
 }
-
 a:hover, button:hover {
     color:#333;
     text-decoration: none;
 }
-
 ul, ol, li {
     list-style: none;
 }
-
 button {
     outline:none;
     background: transparent;
@@ -40,9 +39,8 @@ button:focus {
 
 .form-group {
     width:100%;
+    margin:0; 
 }
-
-
 .form-control {
     outline:none; width:100%;
     font-weight:300;
@@ -61,17 +59,10 @@ button:focus {
     box-shadow: none;
     border-bottom: 1px solid #7f0019;
 }
-
 .form-group .submit-btn {
     position: absolute !important;
     right:0; bottom:0;
 }
-
-
-.form-group  {
-    margin: 0;
-}
-
 .form-group .submit-btn .icon{
     fill:#888;
 }
@@ -80,13 +71,8 @@ button:focus {
 }
 
 
-
-
-
-
 .dropdown-menu {border:0; border-radius: 0;}
 .dropdown-toggle::after {display:none;}
-
 
 
 .px-4hf {
@@ -99,7 +85,6 @@ button:focus {
     color:#888; 
     top:5px; right:8px; 
 }
-
 
 .hover-underline::after,
 .topbar-left .nav-item>a::after,
@@ -119,6 +104,36 @@ button:focus {
 .topbar-right .nav-item:hover::after{
     width: 100%;
 }
+.discover-btn {
+    display:inline-block;
+    border:1px solid #999;
+    width: 10rem; height:3rem;
+    margin:0;
+    background: linear-gradient(to right, #333 50%, transparent 50%);
+    background-size: 220% 100%;
+    background-position: right bottom;
+    transition: all .5s ease;
+}
+.discover-btn>a {
+    display: block; 
+    width: 100%; height: 100%;
+    color:#777; 
+    font-size: 0.7rem;
+    line-height: 3rem;
+    text-indent: 1rem;
+    font-weight: 300;
+}
+.discover-btn>a::after {
+    content: '→';
+/*    position: absolute;*/
+    margin-left: 2.3rem;
+}
+.discover-btn:hover {
+    background-position: left bottom;
+}
+.discover-btn:hover a{
+    color:#fff;
+}
 
 
 /*** 헤더 ***/
@@ -130,31 +145,20 @@ header {
     transition: all 0.5s ease;
 }
 
-header.compressed {
-    height:56px;
-    background-color: rgba(255,255,255,0.95);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-}
-
-header.compressed .topbar-logo img {
-        max-width: 140px;
-    }
-
 header .nav-item {
     padding-right: 1.3rem;
     font-weight: 400;
 }
 
-/* 카테고리 탭*/
-.nav-tabs-wrapper { /*서브메뉴 클릭시 위에 올라오도록*/
-    position: relative;
-    z-index: 1032;
-}
-
+/* 카테고리 탭  +  사이드바 */
 .cate-open-btn {
     cursor:pointer;
 }
 
+.nav-tabs-wrapper { /*서브메뉴 클릭시 위에 올라오도록*/
+    position: relative;
+    z-index: 1032;
+}
 
 .nav-tabs-container {
     position: fixed;
@@ -173,7 +177,7 @@ header .nav-item {
     position: fixed;
     
     width: 300px;
-    margin-top: 3rem;
+/*    margin-top: 3rem;*/
     padding-left:2rem !important;
     left:-300px;
     transition: all 1s ease;
@@ -188,11 +192,11 @@ header .nav-item {
     color:#7f0019;
 }
 
-.tab-content .tab-pane {
+.nav-tabs-container.tab-content .tab-pane {
     padding-top: 7rem !important;
 }
 
-.store-tab, .search-tab {
+.nav-tabs-container .store-tab, .search-tab {
     padding: 0 2rem;
 }
 
@@ -205,102 +209,6 @@ header .nav-item {
     transition: opacity 0.3s ease;
     z-index: 1029;
 }
-
-
-
-/* 제품보기, 읽기 */
-.category {
-    font-size: 0.85rem;
-}
-.category>li {
-    padding: 0.3rem 0;
-}
-
-.subcategory {
-    margin: 0.3rem 0;
-    ;
-}
-
-.subcategory>li {
-    margin-left:1rem;
-    margin-bottom: 0.3rem;
-}
-
-.subcategory a{
-    color:#888;
-    font-size: 0.7rem;
-}
-
-.subcategory.collapsing {
-    transition: height 0.5s ease;   
-}
-
-
-
-/* 방문 */
-
-
-.select-wrapper {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
-    border:0;
-    border-bottom: 1px solid #888;
-    
-    border-radius: 0px;
-    background-color: transparent;
-}
-
-.select-wrapper::after {
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    color:#888;
-    content:'\f107';
-    position: absolute;
-    right:4px; bottom:10px;
-}
-
-.select-wrapper select {
-    border:0;
-    width: 100%; height: 2rem;
-    box-shadow: none;
-    padding: 0 0.2rem;
-    background: transparent;
-    background-image: none;
-    -webkit-appearance: none;
-    outline: none;
-    cursor: pointer;
-    -moz-appearance: none;
-    font-weight: 300;
-    text-overflow: ellipsis;
-}
-
-.map-wrapper {
-    height:200px;
-    margin-top: 3rem;
-}
-
-.map-wrapper #map {
-    height: 100%;
-}
-
-
-/*검색*/
-.search-form {
-    position: relative;
-    height: 2rem;
-}
-.search-form .submit-btn {
-    position: absolute !important;
-    right:0; bottom:0;
-}
-
-.search-form .form-control{
-    height: 2rem;
-    margin-top: 1px;
-}
-
-
 
 .topbar-logo img {
     width: 100%;
@@ -319,8 +227,103 @@ header .nav-item {
     width:1.2rem;
 }
 
+/* 스크롤 다운 시 헤더 줄어들게 설정 */
+header.compressed {
+    height:56px;
+    background-color: rgba(255,255,255,0.95);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
 
-/*로그인 모달*/
+header.compressed .topbar-logo img {
+        max-width: 140px;
+    }
+
+
+/* 사이드바 - 제품보기, 읽기 탭 */
+.category {
+    padding: auto 2rem;
+    font-size: 0.85rem;
+}
+.category>li {
+    padding: 0.3rem 0;
+}
+.subcategory {
+    margin: 0.3rem 0;
+    padding:0;
+}
+.subcategory>li {
+    margin-left:1rem;
+    margin-bottom: 0.3rem;
+}
+.subcategory a{
+    color:#888;
+    font-size: 0.7rem;
+}
+.subcategory.collapsing {
+    transition: height 0.5s ease;   
+}
+
+
+/* 사이드바 - 방문 */
+
+.select-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    border:0;
+    border-bottom: 1px solid #888;
+    border-radius: 0px;
+    background-color: transparent;
+}
+.select-wrapper::after {
+    position: absolute;
+    right:4px; bottom:10px;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    color:#888;
+    content:'\f107';
+}
+.select-wrapper select {
+    border:0;
+    width: 100%; height: 2rem;
+    box-shadow: none;
+    padding: 0 0.2rem;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+    outline: none;
+    cursor: pointer;
+    -moz-appearance: none;
+    font-weight: 300;
+    text-overflow: ellipsis;
+}
+.map-wrapper {
+    height:200px;
+    margin-top: 3rem;
+}
+.map-wrapper #map {
+    height: 100%;
+}
+
+
+/* 사이드바 - 검색 */
+.search-form {
+    position: relative;
+    height: 2rem;
+}
+.search-form .submit-btn {
+    position: absolute !important;
+    right:0; bottom:0;
+}
+.search-form .form-control{
+    height: 2rem;
+    margin-top: 1px;
+}
+
+
+
+
+/* 로그인 모달 */
 
 
 #login-modal .modal {
@@ -349,7 +352,9 @@ header .nav-item {
     font-weight: 300;
     font-size: 0.75rem;
 }
-
+.login-wrapper .form-group {
+     margin-bottom: 1rem;   
+}
 .login-wrapper .form-control{
     background-color: rgba(0, 0, 0, 0.07);
     padding:0.4rem;
@@ -395,143 +400,108 @@ header .nav-item {
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
     font-size: 0.65rem;
 }
-
-.cart-dropdown .cart-product a {
-    padding-top: 0px;
-    line-height: 1.2rem;
-}
-.cart-dropdown p {
-    padding:0; margin:0;
-}
-.cart-dropdown .cart-product-wrapper {
+.cart-product-wrapper {
     padding: 1.7rem;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.cart-dropdown .cart-product img {width:75px;}
-.cart-dropdown .cart-item-text {
+.cart-product-wrapper p {
+    padding:0; margin:0;
+}
+.cart-product a {
+    padding-top: 0px;
+    line-height: 1.2rem;
+}
+.cart-product img {
+    width:75px;
+}
+.cart-product .cart-item-text {
     width: 130px;
     height: 100%;
     margin-left: 10px;
 }
-.cart-dropdown .cart-item-text:hover .item-name {
+.cart-product .cart-item-text:hover .item-name {
     color:#7f0019;
 }
-
-.cart-dropdown .item-del {
+.cart-product .item-del {
     color:#888;
 }
-
-.cart-dropdown .cart-product-wrapper{animation-name: fade; animation-duration: 0.3s;}
+.cart-product-wrapper{animation-name: fade; animation-duration: 0.3s;}
     @keyframes fade {
         from {opacity:0}
         to {opacity:1;}
     }
 
 
-/*스크린 작을때 카트 드롭다운 설정*/
-@media (max-width: 575px) {
-    .topbar-cart-icon {
-            margin-top: -8px;
-        }
-/*
-    
-    .cart-dropdown.show {
-        position: fixed;
-        width: 100%;
-        top:78px;
-        left:0;
-        margin-top: 0;
-        z-index: 1018;
-    }
-    
-*/
-}
 
 
 /*푸터 */
 
 footer {
-    background-color: #f7f7f7;
-     
-    font-size: 0.65rem;;
+    margin-top:5rem;
+/*    border-top: 1px solid #e9e7e2;*/
+/*    background-color: #f7f7f7;*/
+    font-size: 0.75rem;;
 }
-footer .footer-laws ul li {
-    margin-right: 1rem;
+.footer-wrapper {
+    padding: 1.5rem 2rem;
 }
-footer .footer-wrapper {
-    padding-top: 1.5rem;
-}
-footer .footer-logo-lotte {
+.footer-laws .footer-logo-lotte {
     margin-top: -5px;
-    margin-left:-10px;
-    height:40px;
+    margin-left:-15px;
+    height:50px;
     border:none;
 }
-
-
-footer .footer-laws p>a,
-footer .footer-laws li,
-footer .footer-laws address>a{
+.footer-laws {
+    font-size: 0.7rem;
+}
+.footer-laws li{
+    margin-right: 1rem;
+}
+.footer-laws p>a,
+.footer-laws li,
+.footer-laws address>a{
     border-bottom: 1px solid #333;
 }
-
-footer .footer-laws address {
+.footer-laws address {
     max-width: 85%;
     line-height: 1.6;
 }
-
-footer .footer-list ul{
-}
-
-footer .footer-list ul li{
+.footer-list ul li{
     padding: 0.4rem 0;
 }
-footer .footer-list ul li a{
-/*    color:#777;*/
-    font-size: 0.65rem;
+.footer-list ul li a{
+    font-size: 0.7rem;
 }
-footer .footer-list ul li a .icon{
+.footer-list ul li a .icon{
     fill:#333;
     width: 22px;
 }
-footer .footer-list ul li a:hover,
-footer .footer-list ul li a .icon:hover{
+.footer-list ul li a:hover,
+.footer-list ul li a .icon:hover{
     color:#7f0019;
     fill:#7f0019;
 }
-
-
-
-
-footer .footer-newsletter .form-group {
+.footer-newsletter {
+/*    margin-top: -2rem;*/
+}
+.footer-newsletter .form-group {
     width: 80%;
 }
-
-footer .form-control {
-    font-size: 0.6rem;
-    
-}
-.newsletter-form .form-group .submit-btn  {
-    
-    left:0; bottom:0px;
-    
+ .footer-newsletter .form-control {
+    font-size: 0.65rem;   
 }
 
-
-footer .footer-bottom {
+.footer-bottom {
     margin-top: 1.5rem;
     background-color: #333;
+    color:#d0d0d0;
+    font-size: 0.6rem;
 }
-
-
-
-footer .footer-bottom p, 
-footer .footer-bottom a{
+.footer-bottom p, 
+.footer-bottom a{
     margin:0;
     color: #fff;
 }
-
-
 
 
 
@@ -544,8 +514,6 @@ footer .footer-bottom a{
     .topbar-logo img {
         max-width: 140px;
     }
-    
-    
     .sidebar-btn {
         position: absolute;
         margin-left: 2rem;
@@ -563,32 +531,20 @@ footer .footer-bottom a{
     }
     
 }
-/*스크린 작을때 카트 드롭다운 설정*/
+
 @media (max-width: 575px) {
     .topbar-cart-icon {
             margin-top: -8px;
         }
     
     
-.footer-newsletter {
-    padding-left: 1rem !important;
-    margin-bottom: 2.5rem;;
-}
-    
-/*
-    
-    .cart-dropdown.show {
-        position: fixed;
-        width: 100%;
-        top:78px;
-        left:0;
-        margin-top: 0;
-        z-index: 1018;
+    .footer-newsletter {
+/*        padding-left: 1rem !important;*/
+        margin-bottom: 2.5rem;;
     }
-    
-*/
-    
-
+    .footer-newsletter .form-group {
+        width: 100%;
+    }
 }
 /* top 버튼 */
 .go-top{

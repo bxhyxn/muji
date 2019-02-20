@@ -14,8 +14,8 @@
     
 </head>   
 <body>
-    <!--헤더 -->
-    <header class="sticky-top top-nav-wrapper container-fluid row no-gutters">
+    <!-- 헤더 -->
+    <header class="sticky-top container-fluid row no-gutters">
         <div class="topbar-left col-4 col-md-4 my-auto navbar-expand-lg">
             <!-- 카테고리 탭-->
             <div class="d-lg-none cate-open-btn" data-icon="ei-navicon" data-size="s"></div>
@@ -231,43 +231,51 @@
             <a href="cart.html" class="topbar-cart-icon just-cart-link d-sm-none"><div data-icon="ei-heart" data-size="s"></div></a>
         </div>
     </header>
-    <section id="banner-slider" class="banner-slider carousel slide home-full-slider-wrapper m-o p-0" data-ride="carousel">
+    <!-- 메인비주얼 슬라이더 -->
+    <section>
+    <div id="banner-slider" class="banner-slider carousel slide home-full-slider-wrapper m-o p-0" data-ride="carousel">
         <!--배너 이미지 + 좌우 이동 버튼-->
         <div class="carousel-test banner-slider carousel slide home-full-slider-wrapper m-o" data-ride="carousel">
             <div class="carousel-inner home-full-slider">
-                <div class="carousel-item active">
-                    <div class="col-lg-12 home-full-item">
-                        <img class="bg-image" src="img/mv/mv_mj2.jpg" alt="muji">
-                        <div class="carousel-caption">
-                            <h4 class="txt-shdw">What is MUJI?</h4>
-                            <p class="lead txt-shdw">항상 북극을 가리키는 나침반처럼,<br> 우리는 생활의 '기본'과 '보편'을 지향해 나갈 것입니다.</p>
-                            <p class="discover-btn"><a href="aboutmuji.html">자세히 알아보기</a></p>
+                <div class="carousel-item home-full-item active">
+                    <div class="img-frame">
+                    <img src="img/main/aroma.jpg" alt="aroma diffuser">
                         </div>
-                        </div>
-                    </div>
-                <div class="carousel-item  home-full-item">
-                    <img class="bg-image" src="img/mv/mv_wood.jpg" alt="wood">
-                    <div class="carousel-caption">
-                        <h4>떡갈나무 천연 목재 가구</h4>
-                        <p class="lead">나무를 보고 숲을 봅니다</p>
-                        <p class="discover-btn"><a href="#">자세히 알아보기</a></p>
-                    </div>
-                </div>
-                <div class="carousel-item  home-full-item">
-                    <img class="bg-image" src="img/mv/mv_aroma.jpg" alt="aroma diffuser">
                     <div class="carousel-caption">
                         <h4>초음파 아로마 가습기</h4>
                         <p class="lead">원하는 곳에, 원하는 만큼</p>
                         <p class="discover-btn"><a href="#">자세히 알아보기</a></p>
                     </div> 
                 </div>
-                <div class="carousel-item  home-full-item">
-                    <img class="bg-image" src="img/mv/mv_ctn.jpg" alt="organic cotton">
+                <div class="carousel-item home-full-item">
+                    <div class="img-frame">
+                        <img src="img/main/wood.jpg" alt="wood">
+                    </div>
+                    <div class="carousel-caption">
+                        <h4>떡갈나무 천연 목재 가구</h4>
+                        <p class="lead">나무를 보고 숲을 봅니다</p>
+                        <p class="discover-btn"><a href="#">자세히 알아보기</a></p>
+                    </div>
+                </div>
+                <div class="carousel-item home-full-item">
+                <div class="img-frame">
+                        <img src="img/main/cotton.jpg" alt="organic cotton">
+                        </div>
                     <div class="carousel-caption">
                         <h4>면 緬</h4>
                         <p class="lead">오가닉 코튼 침구 시리즈</p>
                         <p class="discover-btn"><a href="#">자세히 알아보기</a></p>
                     </div> 
+                </div>
+                <div class="carousel-item home-full-item">
+                    <div class="img-frame">
+                        <img src="img/main/muji2.jpg" alt="muji">
+                    </div>
+                    <div class="carousel-caption">
+                        <h4 class="">What is MUJI?</h4>
+                        <p class="lead">항상 북극을 가리키는 나침반처럼,<br> 우리는 생활의 '기본'과 '보편'을 지향해 나갈 것입니다.</p>
+                        <p class="discover-btn"><a href="aboutmuji.html">자세히 알아보기</a></p>
+                    </div>
                 </div>   
                 <!--좌우 이동 버튼-->
                 <a class="carousel-control-prev" href="#banner-slider" role="button" data-slide="prev">
@@ -287,193 +295,206 @@
             <li data-target="#banner-slider" data-slide-to="2"></li>
             <li data-target="#banner-slider" data-slide-to="3"></li>
         </ol>
+    </div>
     </section>
-    <!-- 아이템 목록 슬라이더 -->
+    <!-- 상품 슬라이더 -->
     <section class="products-slider text-center">
-        <h6 class="text-uppercase">Products</h6>
-        <div class="container-fluid p-0 m-0">
-            <ul class="tab-title nav nav-tabs mb-2 justify-content-center border-0" id="myTab" role="tablist">
-              <li class="nav-item border-0">
-                <a class="nav-link border-0 active" id="best-tab" data-toggle="tab" href="#best" role="tab" aria-controls="best" aria-selected="true">Best</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link border-0" id="new-tab" data-toggle="tab" href="#new" role="tab" aria-controls="new" aria-selected="false">New</a>
-              </li>
-            </ul>
-            <div class="tab-content" id="myTabContent">
-               <div class="tab-container tab-pane fade show active" id="best" role="tabpanel" aria-labelledby="best-tab">
-                   <div class="container-fluid p-0 m-0">
-                        <div class="row">
-                            <div id="item-slider" class="carousel slide container-fluid" data-ride="carousel">
-                                <div class="best-tab-inner carousel-inner">
-                                    <ol class="carousel-indicators">
-                                        <li data-target="#item-slider" data-slide-to="0" class="active"></li>
-                                        <li data-target="#item-slider" data-slide-to="1"></li>
-                                    </ol>
-                                    <div class="carousel-item active">
-                                        <div class="row items-wrapper">
-                                            <div class="col-4 col-md-2 item-container">
-                                                <a href="item-details.html"><img src="img/item/best_01.jpg" alt=""/>
-                                                <p class="item-name">발이 편한 스니커</p>
-                                                <p class="item-price">￦34,900</p></a>
-                                            </div>
-                                            <div class="col-4 col-md-2 item-container">
-                                                <a href="item-details.html"><img src="img/item/best_02.jpg" alt=""/>
-                                                <p class="item-name">벽걸이형 블루투스 스피커</p>
-                                                <p class="item-price">￦139,000</p></a>
-                                            </div>
-                                            <div class="col-4 col-md-2 item-container">
-                                                <a href="item-details.html"><img src="img/item/best_03.jpg" alt=""/>
-                                                <p class="item-name">발이 편한 스니커</p>
-                                                <p class="item-price">￦34,900</p></a>
-                                            </div>
-                                            <div class="col-4 col-md-2 item-container">
-                                                <a href="item-details.html"><img src="img/item/best_04_.png" alt=""/>
-                                                <p class="item-name">에센셜 오일 라벤더 10ml</p>
-                                                <p class="item-price">￦19,000</p></a>
-                                            </div>
-                                            <div class="col-4 col-md-2 item-container">
-                                                <a href="item-details.html"><img src="img/item/best_05.jpg" alt=""/>
-                                                <p class="item-name">타일 브러쉬</p>
-                                                <p class="item-price">￦2,900</p></a>
-                                            </div>
-                                            <div class="col-4 col-md-2 item-container">
-                                                <a href="item-details.html"><img src="img/item/best_06.jpg" alt=""/>
-                                                <p class="item-name">파자마</p>
-                                                <p class="item-price">￦49,900</p></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="row items-wrapper">
-                                            <div class="col-4 col-md-2 item-container">
-                                                <a href="item-details.html"><img src="img/item/best_07.jpg" alt=""/>
-                                                <p class="item-name">포터블 아로마 디퓨저</p>
-                                                <p class="item-price">￦39,900</p></a>
-                                            </div>
-                                            <div class="col-4 col-md-2 item-container">
-                                                <a href="item-details.html"><img src="img/item/best_08.jpg" alt=""/>
-                                                <p class="item-name">볼펜 · 블루블랙 · 0.38mm</p>
-                                                <p class="item-price">￦1,000</p></a>
-                                            </div>
-                                            <div class="col-4 col-md-2 item-container">
-                                                <a href="item-details.html"><img src="img/item/best_09.jpg" alt=""/>
-                                                <p class="item-name">소프트 박스ㆍ장방형ㆍM</p>
-                                                <p class="item-price">￦13,000</p></a>
-                                            </div>
-                                            <div class="col-4 col-md-2 item-container">
-                                                <a href="item-details.html"><img src="img/item/best_10.jpg" alt=""/>
-                                                <p class="item-name">런치 스푼 · 아동용</p>
-                                                <p class="item-price">￦2,900</p></a>
-                                            </div>
-                                            <div class="col-4 col-md-2 item-container">
-                                                <a href="item-details.html"><img src="img/item/best_11.jpg" alt=""/>
-                                                <p class="item-name">젤 잉크 노크식 · 블랙 · 0.5mm</p>
-                                                <p class="item-price">￦1,300</p></a>
-                                            </div>
-                                            <div class="col-4 col-md-2 item-container">
-                                                <a href="item-details.html"><img src="img/item/best_12.jpg" alt=""/>
-                                                <p class="item-name">메이크 박스ㆍ1/4</p>
-                                                <p class="item-price">￦3,600</p></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>    
-               </div>    
-               <div class="tab-container tab-pane fade" id="new" role="tabpanel" aria-labelledby="new-tab">
-                   <div class="container-fluid m-0 p-0">
-                    <div class="row">
-                        <div id="new-item-slider" class="carousel slide container-fluid" data-ride="carousel">
-                            <div class="new-tab-inner carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="row items-wrapper">
-                                        <div class="col-4 col-md-2 item-container">
-                                            <a href="item-details.html"><img src="img/item/new_01.jpg" alt=""/>
-                                            <p class="item-name">버튼다운 셔츠</p>
-                                            <p class="item-price">￦24,900</p></a>
-                                        </div>
-                                        <div class="col-4 col-md-2 item-container">
-                                            <a href="item-details.html"><img src="img/item/new_02.jpg" alt=""/>
-                                            <p class="item-name">더블링 노트ㆍ무지 · B5ㆍ80매ㆍ다크그레이</p>
-                                            <p class="item-price">￦4,300</p></a>
-                                        </div>
-                                        <div class="col-4 col-md-2 item-container">
-                                            <a href="item-details.html"><img src="img/item/new_03.jpg" alt=""/>
-                                            <p class="item-name">스탠드칼라 리브 셔츠</p>
-                                            <p class="item-price">￦49,900</p></a>
-                                        </div>
-                                        <div class="col-4 col-md-2 item-container">
-                                            <a href="item-details.html"><img src="img/item/new_04.jpg" alt=""/>
-                                            <p class="item-name">보더 긴소매 티셔츠</p>
-                                            <p class="item-price">￦19,900</p></a>
-                                        </div>
-                                        <div class="col-4 col-md-2 item-container">
-                                            <a href="item-details.html"><img src="img/item/new_05.jpg" alt=""/>
-                                            <p class="item-name">쇼트 삭스 3족 세트</p>
-                                            <p class="item-price">￦8,000</p></a>
-                                        </div>
-                                        <div class="col-4 col-md-2 item-container">
-                                            <a href="item-details.html"><img src="img/item/new_06.jpg" alt=""/>
-                                            <p class="item-name">옥스포드 셔츠</p>
-                                            <p class="item-price">￦29,900</p></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <div class="row items-wrapper">
-                                        <div class="col-4 col-md-2 item-container">
-                                            <a href="item-details.html"><img src="img/item/new_07.jpg" alt=""/>
-                                            <p class="item-name">재킷</p>
-                                            <p class="item-price">￦79,900</p></a>
-                                        </div>
-                                        <div class="col-4 col-md-2 item-container">
-                                            <a href="item-details.html"><img src="img/item/new_08.jpg" alt=""/>
-                                            <p class="item-name">파자마</p>
-                                            <p class="item-price">￦34,900</p></a>
-                                        </div>
-                                        <div class="col-4 col-md-2 item-container">
-                                            <a href="item-details.html"><img src="img/item/new_09.jpg" alt=""/>
-                                            <p class="item-name">집업 파카</p>
-                                            <p class="item-price">￦34,900</p></a>
-                                        </div>
-                                        <div class="col-4 col-md-2 item-container">
-                                            <a href="item-details.html"><img src="img/item/new_10.jpg" alt=""/>
-                                            <p class="item-name">륙색·A4 사이즈</p>
-                                            <p class="item-price">￦29,900</p></a>
-                                        </div>
-                                        <div class="col-4 col-md-2 item-container">
-                                            <a href="item-details.html"><img src="img/item/new_11.jpg" alt=""/>
-                                            <p class="item-name">파자마</p>
-                                            <p class="item-price">￦39,900</p></a>
-                                        </div>
-                                        <div class="col-4 col-md-2 item-container">
-                                            <a href="item-details.html"><img src="img/item/new_12.jpg" alt=""/>
-                                            <p class="item-name">파자마</p>
-                                            <p class="item-price">￦39,900</p></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <ol class="carousel-indicators">
-                                    <li data-target="#new-item-slider" data-slide-to="0" class="active"></li>
-                                    <li data-target="#new-item-slider" data-slide-to="1"></li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>    
-                  </div>
-               </div>
+        <h6>인기 상품</h6>
+        <div id="item-slider" class="carousel slide container-fluid p-0" data-ride="carousel">
+            <div class="best-tab-inner carousel-inner">
+                <ol class="carousel-indicators">
+                    <li data-target="#item-slider" data-slide-to="0" class="active"></li>
+                    <li data-target="#item-slider" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-item active">
+                    <ul class="item-container row m-0 d-flex justify-content-around">
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/best_01.jpg" alt=""/>
+                            <p class="item-name">발이 편한 스니커</p>
+                            <p class="item-price">￦34,900</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/best_02.jpg" alt=""/>
+                            <p class="item-name">벽걸이형 블루투스 스피커</p>
+                            <p class="item-price">￦139,000</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/best_03.jpg" alt=""/>
+                            <p class="item-name">발이 편한 스니커</p>
+                            <p class="item-price">￦34,900</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/best_04_.png" alt=""/>
+                            <p class="item-name">에센셜 오일 라벤더 10ml</p>
+                            <p class="item-price">￦19,000</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/best_05.jpg" alt=""/>
+                            <p class="item-name">타일 브러쉬</p>
+                            <p class="item-price">￦2,900</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/best_06.jpg" alt=""/>
+                            <p class="item-name">파자마</p>
+                            <p class="item-price">￦49,900</p></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="carousel-item">
+                    <ul class="item-container row m-0 d-flex justify-content-around">                           
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/best_07.jpg" alt=""/>
+                            <p class="item-name">포터블 아로마 디퓨저</p>
+                            <p class="item-price">￦39,900</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/best_08.jpg" alt=""/>
+                            <p class="item-name">볼펜 · 블루블랙 · 0.38mm</p>
+                            <p class="item-price">￦1,000</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/best_09.jpg" alt=""/>
+                            <p class="item-name">소프트 박스ㆍ장방형ㆍM</p>
+                            <p class="item-price">￦13,000</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/best_10.jpg" alt=""/>
+                            <p class="item-name">런치 스푼 · 아동용</p>
+                            <p class="item-price">￦2,900</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/best_11.jpg" alt=""/>
+                            <p class="item-name">젤 잉크 노크식 · 블랙 · 0.5mm</p>
+                            <p class="item-price">￦1,300</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/best_12.jpg" alt=""/>
+                            <p class="item-name">메이크 박스ㆍ1/4</p>
+                            <p class="item-price">￦3,600</p></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <h6>신상품</h6>
+        <div id="new-item-slider" class="carousel slide container-fluid p-0" data-ride="carousel">
+            <div class="new-tab-inner carousel-inner">
+                <div class="carousel-item active">
+                    <ul class="item-container row m-0 d-flex justify-content-around">                           
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/new_01.jpg" alt=""/>
+                            <p class="item-name">버튼다운 셔츠</p>
+                            <p class="item-price">￦24,900</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/new_02.jpg" alt=""/>
+                            <p class="item-name">더블링 노트ㆍ무지 · B5ㆍ80매ㆍ다크그레이</p>
+                            <p class="item-price">￦4,300</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/new_03.jpg" alt=""/>
+                            <p class="item-name">스탠드칼라 리브 셔츠</p>
+                            <p class="item-price">￦49,900</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/new_04.jpg" alt=""/>
+                            <p class="item-name">보더 긴소매 티셔츠</p>
+                            <p class="item-price">￦19,900</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/new_05.jpg" alt=""/>
+                            <p class="item-name">쇼트 삭스 3족 세트</p>
+                            <p class="item-price">￦8,000</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/new_06.jpg" alt=""/>
+                            <p class="item-name">옥스포드 셔츠</p>
+                            <p class="item-price">￦29,900</p></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="carousel-item">
+                    <ul class="item-container row m-0 d-flex justify-content-around">                           
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/new_07.jpg" alt=""/>
+                            <p class="item-name">재킷</p>
+                            <p class="item-price">￦79,900</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/new_08.jpg" alt=""/>
+                            <p class="item-name">파자마</p>
+                            <p class="item-price">￦34,900</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/new_09.jpg" alt=""/>
+                            <p class="item-name">집업 파카</p>
+                            <p class="item-price">￦34,900</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/new_10.jpg" alt=""/>
+                            <p class="item-name">륙색·A4 사이즈</p>
+                            <p class="item-price">￦29,900</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/new_11.jpg" alt=""/>
+                            <p class="item-name">파자마</p>
+                            <p class="item-price">￦39,900</p></a>
+                        </li>
+                        <li class="col-4 col-md-2">
+                            <a href="item-details.html"><img src="img/item/new_12.jpg" alt=""/>
+                            <p class="item-name">파자마</p>
+                            <p class="item-price">￦39,900</p></a>
+                        </li>
+                    </ul>
+                </div>
+                <ol class="carousel-indicators">
+                    <li data-target="#new-item-slider" data-slide-to="0" class="active"></li>
+                    <li data-target="#new-item-slider" data-slide-to="1"></li>
+                </ol>
             </div>
         </div>
     </section>
-    <!-- 무지 스토리 카드 -->   
-    <section class="mujistory text-center">
-        <h6 class="text-uppercase">Muji story</h6>
-        <div class="container-fluid mt-4">
-            <div class="story-card-wrapper row">
-                <div class="story-card col-6 col-lg-3">
+    <!-- 기획전 -->
+    <section class="brand-story promotion d-flex">
+        <div class="text-container">
+            <h4>기획전</h4>
+            <h6>2018 A/W 생활잡화 신상품</h6>
+            <p>플란넬 침구 시리즈 외</p>
+            <p class="discover-btn"><a href="#">자세히 알아보기</a></p>
+        </div>
+        <div class="brand-story-img">
+            <img src="img/promotion.jpg" alt="what is muji">
+        </div>
+    </section>
+    <!-- 브랜드 스토리 1 -->
+    <section class="brand-story what-is-muji d-flex">
+        <div class="brand-story-img">
+            <img src="img/whatismuji_main01.png" alt="what is muji">
+        </div>
+        <div class="text-container">
+            <h4>무인양품</h4>
+            <h6>What is MUJI</h6>
+            <p>지극히 합리적인 공정을 통해 생산된 상품은 매우 간결합니다. <br> 이를테면 '텅 빈 그릇'과 같은 존재로, 단순하면서도 여백이 있기 때문에 사람들의 다양한 생각을 받아들일 수 있는 유연함이 그 속에서 태어날 수 있습니다.</p>
+            <p class="discover-btn"><a href="#">자세히 알아보기</a></p>
+        </div>
+    </section>
+    <!-- 브랜드 스토리 2 -->   
+    <section class="brand-story mujistory d-flex">
+        <div class="text-container">
+            <h4>무지 이야기</h4>
+            <h6>자연, 당연, 무지.</h6>
+            <p>무인양품의 시작은 자연입니다. <br>자연 그대로의 색, 천연소재, 소박한 종이에서부터 전까지 있는 그대로의 매력을 찾아 무인양품은 시작되었습니다. </p>
+            <p class="discover-btn"><a href="#">자세히 알아보기</a></p>
+        </div>
+        <div class="brand-story-img">
+            <img src="img/mujinature.jpg" alt="what is muji">
+        </div>
+    </section>
+    <!-- 브랜드 스토리 3 -->   
+    <section class="brand-story mujistory-all d-flex">
+        <div class="brand-story-img ">
+            <div class="story-card-wrapper row no-gutters">
+                <div class="story-card col-3">
                     <div class="card"><a href="mujistory.html">
                         <img src="img/card/01.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
@@ -481,7 +502,7 @@
                         </div></a>
                     </div>
                 </div>
-                <div class="story-card col-6 col-lg-3">
+                <div class="story-card col-3">
                     <div class="card"><a href="mujistory.html">
                         <img src="img/card/02.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
@@ -489,7 +510,7 @@
                         </div></a>
                     </div>
                 </div>
-                <div class="story-card col-6 col-lg-3">
+                <div class="story-card col-3">
                     <div class="card"><a href="mujistory.html">
                         <img src="img/card/03.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
@@ -497,7 +518,7 @@
                         </div></a>
                     </div>
                 </div>
-                <div class="story-card col-6 col-lg-3">
+                <div class="story-card col-3">
                     <div class="card"><a href="mujistory.html">
                         <img src="img/card/04.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
@@ -505,7 +526,7 @@
                         </div></a>
                     </div>
                 </div>
-                <div class="story-card col-6 col-lg-3">
+                <div class="story-card col-3">
                     <div class="card"><a href="mujistory.html">
                         <img src="img/card/food.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
@@ -513,7 +534,7 @@
                         </div></a>
                     </div>
                 </div>
-                <div class="story-card col-6 col-lg-3">
+                <div class="story-card col-3">
                     <div class="card"><a href="mujistory.html">
                         <img src="img/card/fabric.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
@@ -521,7 +542,7 @@
                         </div></a>
                     </div>
                 </div>
-                <div class="story-card col-6 col-lg-3">
+                <div class="story-card col-3">
                     <div class="card"><a href="mujistory.html">
                         <img src="img/card/organic.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
@@ -529,7 +550,7 @@
                         </div></a>
                     </div>
                 </div>
-                <div class="story-card col-6 col-lg-3">
+                <div class="story-card col-3 col-lg-3">
                     <div class="card"><a href="mujistory.html">
                         <img src="img/card/nature.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
@@ -539,7 +560,13 @@
                 </div>
             </div>
         </div>
-    </section>
+        <div class="text-container">
+            <h4>무지 이야기</h4>
+            <h6>더 많은 이야기를 만나보세요</h6>
+            <p class="discover-btn"><a href="#">자세히 알아보기</a></p>
+        </div>
+    </section>    
+        
     <!-- 푸터 -->
     <footer>
        <div class="footer-wrapper container-fluid px-4hf row m-0 ">
@@ -553,9 +580,8 @@
                     <li><a href="#">롯데쇼핑e커머스 사업본부 소개</a></li>
                 </ul>
                 <address>롯데쇼핑 주식회사 대표이사 강희태 | 서울특별시 송파구 올림픽로 300 롯데월드타워 26층 | 사업자등록번호 : 529-85-00774 (롯데쇼핑(주) e커머스 사업본부) | 통신판매업 신고 : 2019-서울송파-0158 | 고객만족센터: 1577-2892 muji@lotte.com <a href="#">(공정거래위원회 사업자정보확인)</a> | 호스팅 서비스 사업자 : 롯데쇼핑㈜ e커머스 사업본부</address>
-                <p><small>Copyright LOTTE SHOPPING Co., Ltd. e-commerce business division All right reserved.</small></p>
            </div>
-           <div class="footer-links col-lg-7 row p-0">
+           <div class="footer-links col-lg-7 row p-0 no-gutters">
                <div class="footer-list col-12 col-sm-6 col-lg-4 d-flex row no-gutters">
                     <div class="col-6 col-sm-12">
                        <p class="text-muted p-0">소셜</p>
@@ -581,6 +607,7 @@
                        <li><a href="#">About MUJI</a></li>
                        <li><a href="#">What is MUJI</a></li>
                        <li><a href="#">MUJI 이야기</a></li>
+<!--                       <li><a href="#">카탈로그</a></li>-->
                        <li><a href="#">기업 정보</a></li>
                     </ul>
                </div>
@@ -595,9 +622,8 @@
                </div>
            </div>
        </div>
-       <div class="footer-bottom d-flex justify-content-between px-4hf py-3 m-0">
-               <p><a href="#">MUJI</a></p>
-               <p>대한민국</p>
+       <div class="footer-bottom text-center px-4hf py-2 m-0">
+           <p><small>Copyright LOTTE SHOPPING Co., Ltd. e-commerce business division All right reserved.</small></p>
        </div>
     </footer>
     <!-- TOP 버튼 -->
