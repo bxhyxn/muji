@@ -181,6 +181,7 @@ header.compressed .topbar-right .icon:hover {
         width:100%; height:40%;
         left:0;
         bottom: 0;
+        padding:0;
     }
     .banner-slider .carousel-control-prev,
     .banner-slider .carousel-control-next{
