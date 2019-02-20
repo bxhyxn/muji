@@ -141,7 +141,7 @@ button:focus {
 header {
     height:78px;
     padding: 0 2rem !important;
-    background-color: #fff;
+    background-color: #f7f6f3;
     transition: all 0.5s ease;
 }
 
@@ -230,7 +230,7 @@ header .nav-item {
 /* 스크롤 다운 시 헤더 줄어들게 설정 */
 header.compressed {
     height:56px;
-    background-color: rgba(255,255,255,0.95);
+    background-color: rgba(247,246,243,0.95);
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
 }
 
