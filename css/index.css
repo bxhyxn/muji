@@ -10,13 +10,13 @@ header {
 .topbar-right>a{
     color:#fff;
 }
-/*
-.topbar-left .nav-tabs-wrapper.text-333 a,
-.nav-tabs-wrapper.tabs-in-sidebar a{
-    color:#888;
-    animation: all 1s;
+
+@media (max-width: 767px) {
+    .cate-open-btn {
+        color:#fff;
+    }
 }
-*/
+
 .topbar-left .nav-tabs-wrapper.text-333 a:hover{
     color:#7f0019;
 }
