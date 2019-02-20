@@ -133,9 +133,12 @@ header.compressed .topbar-right .icon:hover {
 
 
 @media (max-width: 767px) {
+    .banner-slider {
+        margin-top: -56px;
+    }
     .home-full-slider .home-full-item {
         padding: 0;
-        height:850px;
+        height:700px;
 /*        border:1px solid red;*/
     }
     .img-frame {
@@ -143,7 +146,7 @@ header.compressed .topbar-right .icon:hover {
         right:0; width:100%; 
     }
     .img-frame img {
-        height:500px !important; width:100%;
+        height:400px !important; width:100%;
     }
     .banner-slider .carousel-caption{
         position: absolute;
@@ -178,6 +181,31 @@ header.compressed .topbar-right .icon:hover {
         width:100%; height:40%;
         left:0;
         bottom: 0;
+    }
+    .banner-slider .carousel-control-prev,
+    .banner-slider .carousel-control-next{
+        display: block;
+        width:15%;
+        height: 400px;
+        top:0; 
+/*        border:1px solid red;*/
+    }
+    .banner-slider .carousel-control-prev {
+/*        left:0;*/
+    }
+    .banner-slider .carousel-control-next{
+/*        right:calc(63% + 1.3rem);*/
+    }
+    .banner-slider .carousel-control-prev .icon, 
+    .banner-slider .carousel-control-next .icon{
+        fill:#333;
+        width:50px;
+        height:400px;
+    }
+    .banner-slider .carousel-control-prev .icon:hover, 
+    .banner-slider .carousel-control-next .icon:hover {
+        fill:#7f0019;
+        opacity:0.6;
     }
 }
 @media (max-width: 575px) {
