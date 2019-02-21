@@ -97,7 +97,7 @@ button:focus {
     border:1px solid #999;
     width: 10rem; height:3rem;
     margin:0;
-    background: linear-gradient(to right, #333 50%, transparent 50%);
+    background: linear-gradient(to right, #7f0019 50%, transparent 50%);
     background-size: 220% 100%;
     background-position: right bottom;
     transition: all .5s ease;
@@ -117,6 +117,7 @@ button:focus {
     margin-left: 2.3rem;
 }
 .discover-btn:hover {
+    border: 1px solid #7f0019;
     background-position: left bottom;
 }
 .discover-btn:hover a{

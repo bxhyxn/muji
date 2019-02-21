@@ -64,34 +64,15 @@
 .cart-container .keep-shop{
     display: inline-block;
     margin-top: 1rem;
+    margin-left: 4rem;
     font-weight: 300;
     color:#888;
 }
-
 .cart-container .discover-btn{
-    float: right;
-    border: 1px solid #333;
-    background: linear-gradient(to right, #7f0019 50%, transparent 50%);
-    background-size: 220% 100%;
-    background-position: right bottom;
+    margin-left: 3rem;
 }
-.cart-container .discover-btn>a {
-    display: block; 
-    width: 100%; height: 100%;
-    color:#333; 
-    font-size: 0.7rem;
-    line-height: 3rem;
-    text-indent: 1rem;
-    font-weight: 300;
-}
-.cart-container .discover-btn>a::after {
-    content: '→';
-/*    position: absolute;*/
-    margin-left: 2.3rem;
-}
-.cart-container .discover-btn:hover {
-    border:1px solid #7f0019;
-    background-position: left bottom;
+.cart-container .discover-btn a{
+    color:#333;
 }
 .cart-container .discover-btn:hover a{
     color:#fff;
