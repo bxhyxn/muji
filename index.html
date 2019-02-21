@@ -38,7 +38,7 @@
                 </ul>
                 <!-- 제품보기 -->
                 <div class="tab-pane products-tab active" id="nav-products" role="tabpanel" aria-labelledby="nav-products">
-                    <ul class="category px-4hf">
+                    <ul class="category">
                         <li>
                             <a data-toggle="collapse" href="#cate1-1" role="button" aria-expanded="false" aria-controls="cate1-1">MUJI 특별기획</a>
                             <ul class="subcategory collapse" id="cate1-1">
@@ -99,7 +99,7 @@
                 </div>
                 <!-- 읽기 -->
                 <div class="tab-pane muji-tab" id="nav-muji" role="tabpanel" aria-labelledby="nav-muji-tab">
-                    <ul class="category px-4hf">
+                    <ul class="category">
                         <li>
                             <a data-toggle="collapse" href="#cate2-1" role="button" aria-expanded="false" aria-controls="cate2-1">MUJI 無印良品</a>
                             <ul class="subcategory collapse" id="cate2-1">
@@ -570,7 +570,6 @@
 <!--            <p class="discover-btn"><a href="#">자세히 알아보기</a></p>-->
         </div>
     </section>    
-        
     <!-- 푸터 -->
     <footer>
        <div class="footer-wrapper container-fluid row m-0 ">
@@ -626,7 +625,7 @@
                </div>
            </div>
        </div>
-       <div class="footer-bottom text-center px-4hf py-2 m-0">
+       <div class="footer-bottom text-center m-0">
            <p><small>Copyright LOTTE SHOPPING Co., Ltd. e-commerce business division All right reserved.</small></p>
        </div>
     </footer>
@@ -680,7 +679,6 @@
             </div>
         </div>
     </div>
-    
     <!-- 스크립트 영역 -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -689,18 +687,5 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfw4HL7gUJCbHvzWwzkz8wbVzr5fhvcF4&callback=initMap"
     async defer></script>
     <script src="js/script.js"></script>
-    
-    <script>
-    $('.nav-tabs-wrapper .nav-item').click(function(){
-        $('.topbar-left .nav-tabs-wrapper').addClass('text-333');
-    });
-     $('.sidebar-overlay').click(function(){
-        $('.topbar-left .nav-tabs-wrapper').removeClass('text-333');
-    });
-    $('.sidebar .close-btn').click(function(){
-        $('.topbar-left .nav-tabs-wrapper').removeClass('text-333');
-    });
-    </script>
-    
 </body>
 </html>

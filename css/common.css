@@ -236,7 +236,7 @@ header.compressed .topbar-logo img {
 
 /* 사이드바 - 제품보기, 읽기 탭 */
 .category {
-    padding: auto 2rem;
+    padding-left: 2rem;
     font-size: 0.85rem;
 }
 .category>li {
@@ -429,7 +429,34 @@ header.compressed .topbar-logo img {
 /* 컨텐츠 */
 section {
     padding:0 2rem;
+    margin-top: 2rem;
 }
+
+/* 현재 위치 네비게이션 */
+.navigation p{
+/*    margin-top: 1.5rem;*/
+}
+.nav-subcate{
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    width: 100%;
+}
+
+.nav-subcate li{
+    padding: 1rem 0.5rem;
+}
+.nav-subcate li a{
+    color: #777;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    word-break: keep-all;
+}
+
+.nav-subcate li a.active{
+    color:#7f0019;
+    border-bottom: 1px solid #7f0019;
+}
+
 
 /* 페이징 */
 .pagination {
@@ -465,7 +492,7 @@ section {
 /* 푸터 */
 
 footer {
-    margin-top:3rem;
+    margin-top:5rem!important;
     padding-top: 1rem;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
 /*    background-color: #f7f7f7;*/
@@ -523,8 +550,11 @@ footer {
 .footer-bottom {
     margin-top: 1.5rem;
     background-color: #333;
+    height:35px;
+    line-height: 35px;
     color:#d0d0d0;
     font-size: 0.6rem;
+    text-align: center;
 }
 .footer-bottom p, 
 .footer-bottom a{
@@ -608,6 +638,9 @@ footer {
     .nav-tabs-container.tab-content .tab-pane {
     padding-top: 4rem !important;
 }
+    .nav-subcate{
+        justify-content: flex-start;
+    }
     .footer-newsletter {
 /*        padding-left: 1rem !important;*/
         margin-bottom: 2.5rem;;

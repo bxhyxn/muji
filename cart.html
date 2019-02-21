@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,500,700&amp;subset=korean" rel="stylesheet">
     <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/category.css">
+    <link rel="stylesheet" href="css/cart.css">
 </head>   
 <body>
     <!-- 헤더 -->
@@ -231,150 +231,68 @@
         </div>
     </header>
     <section class="navigation text-center">
-        <h5><a href="#">가방 &sdot; 신발</a></h5>
-        <ul class="nav-subcate d-flex p-0 align-items-center justify-content-center">
-            <li><a class="hover-underline active" href="#">모두 보기</a></li>
-            <li><a class="hover-underline" href="#">남성가방 &sdot; 벨트</a></li>
-            <li><a class="hover-underline" href="#">남성화</a></li>
-            <li><a class="hover-underline" href="#">여성가방</a></li>
-            <li><a class="hover-underline" href="#">여성화</a></li>
-            <li><a class="hover-underline" href="#">여행 가방</a></li>
-        </ul>
+        <h5>장바구니</h5>
     </section>
-    <section class="category-list-wrapper">
-        <div class="category-list-selector d-flex justify-content-between">
-            <div class="select-wrapper">
-                <select class="custom-select">
-                  <option selected>보기</option>
-                  <option value="1">12개씩</option>
-                  <option value="2">24개씩</option>
-                  <option value="3">36개씩</option>
-                </select>
+    <!-- 장바구니 -->
+    <section class="cart-container  container">
+            <div class="cart-product">
+                <div class="d-flex justify-content-between">
+                   <a href="item-details.html" class="cart-item-img"><img src="img/item/best_01.jpg" alt=""></a>
+                   <div class="cart-item-text my-auto">
+                       <a href="item-details.html">
+                           <p class="m-0">
+                           <span class="item-name">발이 편한 스니커</span><br>
+                           <small class="text-muted">수량: 1</small><br>
+                           <small>￦34,900</small>
+                           </p>
+                       </a>
+                   </div>
+                   <a href="#" class="item-del my-auto"><div data-icon="ei-close-o" data-size="s"></div></a>
+                </div>
             </div>
-            <div class="select-wrapper">
-                <select class="custom-select">
-                  <option selected>정렬</option>
-                  <option value="1">추천순</option>
-                  <option value="2">신상품순</option>
-                  <option value="3">낮은가격순</option>
-                  <option value="4">높은가격순</option>
-                </select>
+            <div class="cart-product">
+                <div class="d-flex justify-content-between">
+                   <a href="item-details.html" class="cart-item-img"><img src="img/item/new_07.jpg" alt=""></a>
+                   <div class="cart-item-text my-auto">
+                       <a href="item-details.html">
+                           <p class="m-0"><span class="item-name">재킷</span><br>
+                           <small class="text-muted">
+                               수량: 1
+                           </small><br>
+                           <small>￦79,900</small>
+                           </p>
+                       </a>
+                   </div>
+                   <a href="#" class="item-del my-auto"><div data-icon="ei-close-o" data-size="s"></div></a>
+                </div>
             </div>
-            
-        </div>
-        <div class="category-list align-items-center">
-        <ul class="item-container row p-0 d-flex justify-content-around">
-            <li class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                <a class="item-wrap-link" href="item-details.html"><img src="img/item/best_01.jpg" alt=""/>
-                <p class="item-name">발이 편한 스니커</p>
-                <p class="item-price">￦34,900</p></a>
-                <a class="item-btn add-cart"><div data-icon="ei-heart" data-size="s"></div></a>
-                <a class="item-btn quick-view" href="#"><div data-icon="ei-external-link"></div></a>
-            </li>
-            <li class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                <a class="item-wrap-link" href="item-details.html"><img src="img/item/best_02.jpg" alt=""/>
-                <p class="item-name">벽걸이형 블루투스 스피커</p>
-                <p class="item-price">￦139,000</p></a>
-                <a class="item-btn add-cart"><div data-icon="ei-heart" data-size="s"></div></a>
-                <a class="item-btn quick-view" href="#"><div data-icon="ei-external-link"></div></a>
-            </li>
-            <li class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                <a class="item-wrap-link" href="item-details.html"><img src="img/item/best_03.jpg" alt=""/>
-                <p class="item-name">발이 편한 스니커</p>
-                <p class="item-price">￦34,900</p></a>
-                <a class="item-btn add-cart"><div data-icon="ei-heart" data-size="s"></div></a>
-                <a class="item-btn quick-view" href="#"><div data-icon="ei-external-link"></div></a>
-            </li>
-            <li class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                <a class="item-wrap-link" href="item-details.html"><img src="img/item/best_04_.png" alt=""/>
-                <p class="item-name">에센셜 오일 라벤더 10ml</p>
-                <p class="item-price">￦19,000</p></a>
-                <a class="item-btn add-cart"><div data-icon="ei-heart" data-size="s"></div></a>
-                <a class="item-btn quick-view" href="#"><div data-icon="ei-external-link"></div></a>
-            </li>
-            <li class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                <a class="item-wrap-link" href="item-details.html"><img src="img/item/best_05.jpg" alt=""/>
-                <p class="item-name">타일 브러쉬</p>
-                <p class="item-price">￦2,900</p></a>
-                <a class="item-btn add-cart"><div data-icon="ei-heart" data-size="s"></div></a>
-                <a class="item-btn quick-view" href="#"><div data-icon="ei-external-link"></div></a>
-            </li>
-            <li class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                <a class="item-wrap-link" href="item-details.html"><img src="img/item/best_06.jpg" alt=""/>
-                <p class="item-name">파자마</p>
-                <p class="item-price">￦49,900</p></a>
-                <a class="item-btn add-cart"><div data-icon="ei-heart" data-size="s"></div></a>
-                <a class="item-btn quick-view" href="#"><div data-icon="ei-external-link"></div></a>
-            </li>
-            <li class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                <a class="item-wrap-link" href="item-details.html"><img src="img/item/best_01.jpg" alt=""/>
-                <p class="item-name">발이 편한 스니커</p>
-                <p class="item-price">￦34,900</p></a>
-                <a class="item-btn add-cart"><div data-icon="ei-heart" data-size="s"></div></a>
-                <a class="item-btn quick-view" href="#"><div data-icon="ei-external-link"></div></a>
-            </li>
-            <li class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                <a class="item-wrap-link" href="item-details.html"><img src="img/item/best_02.jpg" alt=""/>
-                <p class="item-name">벽걸이형 블루투스 스피커</p>
-                <p class="item-price">￦139,000</p></a>
-                <a class="item-btn add-cart"><div data-icon="ei-heart" data-size="s"></div></a>
-                <a class="item-btn quick-view" href="#"><div data-icon="ei-external-link"></div></a>
-            </li>
-            <li class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                <a class="item-wrap-link" href="item-details.html"><img src="img/item/best_03.jpg" alt=""/>
-                <p class="item-name">발이 편한 스니커</p>
-                <p class="item-price">￦34,900</p></a>
-                <a class="item-btn add-cart"><div data-icon="ei-heart" data-size="s"></div></a>
-                <a class="item-btn quick-view" href="#"><div data-icon="ei-external-link"></div></a>
-            </li>
-            <li class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                <a class="item-wrap-link" href="item-details.html"><img src="img/item/best_04_.png" alt=""/>
-                <p class="item-name">에센셜 오일 라벤더 10ml</p>
-                <p class="item-price">￦19,000</p></a>
-                <a class="item-btn add-cart"><div data-icon="ei-heart" data-size="s"></div></a>
-                <a class="item-btn quick-view" href="#"><div data-icon="ei-external-link"></div></a>
-            </li>
-            <li class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                <a class="item-wrap-link" href="item-details.html"><img src="img/item/best_05.jpg" alt=""/>
-                <p class="item-name">타일 브러쉬</p>
-                <p class="item-price">￦2,900</p></a>
-                <a class="item-btn add-cart"><div data-icon="ei-heart" data-size="s"></div></a>
-                <a class="item-btn quick-view" href="#"><div data-icon="ei-external-link"></div></a>
-            </li>
-            <li class="col-6 col-sm-4 col-lg-3 col-xl-2">
-                <a class="item-wrap-link" href="item-details.html"><img src="img/item/best_06.jpg" alt=""/>
-                <p class="item-name">파자마</p>
-                <p class="item-price">￦49,900</p></a>
-                <a class="item-btn add-cart"><div data-icon="ei-heart" data-size="s"></div></a>
-                <a class="item-btn quick-view" href="#"><div data-icon="ei-external-link"></div></a>
-            </li>
-        </ul>
-        </div>
-        <nav aria-label="pagination-nav">
-          <ul class="pagination justify-content-center">
-            <li class="page-item disabled">
-              <a class="page-link" href="#" aria-label="Previous">
-                <span aria-hidden="true">&laquo;</span>
-              </a>
-            </li>
-            <li class="page-item active"><a class="page-link hover-underline" href="#">1</a></li>
-            <li class="page-item"><a class="page-link hover-underline" href="#">2</a></li>
-            <li class="page-item"><a class="page-link hover-underline" href="#">3</a></li>
-            <li class="page-item"><a class="page-link hover-underline" href="#">4</a></li>
-            <li class="page-item"><a class="page-link hover-underline" href="#">5</a></li>
-            <li class="page-item">
-              <a class="page-link" href="#" aria-label="Next">
-                <span aria-hidden="true">&raquo;</span>
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <div class="add-cart-popup">
-            <div class="popup-contents">
-                <p>선택하신 상품이 카트에 추가되었습니다</p>
+            <div class="cart-product">
+                <div class="d-flex justify-content-between">
+                   <a href="item-details.html" class="cart-item-img"><img src="img/item/best_07.jpg" alt=""></a>
+                   <div class="cart-item-text my-auto">
+                       <a href="item-details.html">
+                           <p class="m-0"><span class="item-name">포터블 아로마 디퓨저</span><br>
+                           <small class="text-muted">
+                               수량: 1
+                           </small><br>
+                           <small>￦39,900</small>
+                           </p>
+                       </a>
+                   </div>
+                   <a href="#" class="item-del my-auto"><div data-icon="ei-close-o" data-size="s"></div></a>
+                </div>
             </div>
-        </div>
-    </section>
+            <hr>
+            <div class="cart-total px-2 d-flex justify-content-between">
+                <p class="text-muted">TOTAL</p>
+                <p><strong>￦154,700</strong></p>
+            </div>
+            <hr>
+            <div class="cart-btn text-center">
+                <div class="keep-shop"><a class="hover-underline" href="category.html">계속 쇼핑하기</a></div>
+                <div class="discover-btn w-50"><a href="checkout.html">주문하기</a></div>
+            </div>
+    </section> 
     <!-- 푸터 -->
     <footer>
        <div class="footer-wrapper container-fluid row m-0 ">
@@ -484,6 +402,7 @@
             </div>
         </div>
     </div>
+    
     <!-- 스크립트 영역 -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
@@ -492,15 +411,5 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAfw4HL7gUJCbHvzWwzkz8wbVzr5fhvcF4&callback=initMap"
     async defer></script>
     <script src="js/script.js"></script>
-    <script>
-        $(document).ready(function () {
-            $( ".add-cart" ).click(function() {
-                $( ".add-cart-popup" ).addClass('show');
-                setTimeout(function(){
-                    $( ".add-cart-popup" ).removeClass('show');
-                }, 3000);
-            });
-        });
-    </script>
 </body>
 </html>
