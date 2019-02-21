@@ -19,12 +19,9 @@ section {
     }
 }
 
-.topbar-left .nav-tabs-wrapper.text-333 a:hover{
-    color:#7f0019;
-}
-
 
 header.compressed .topbar-left .nav-item>a,
+header.compressed .topbar-left .cate-open-btn,
 header.compressed .topbar-right .nav-item,
 header.compressed .topbar-right .icon {
     color:#333;

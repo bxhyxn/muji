@@ -583,6 +583,9 @@ footer {
     section {
         padding:0 1rem;
     }
+    .footer-wrapper {
+        padding: 1.5rem 1.5rem;
+    }
     .topbar-logo img {
         max-width: 140px;
     }    
@@ -600,7 +603,7 @@ footer {
 /* 폰 */
 @media (max-width: 575px) {
     .topbar-right>a>.icon {
-            margin-top: -8px;
+/*            margin-top: -4px;*/
         }
     .nav-tabs-container.tab-content .tab-pane {
     padding-top: 4rem !important;
