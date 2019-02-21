@@ -108,14 +108,14 @@
     transition: all 1s ease;
     
 }
-.popup-contents {
+.add-cart-popup .popup-contents {
     position: relative;
     top:0px; left:0;
     width: 100%;
     background-color: #7f0019;
     color:#fff;
 }
-.popup-contents p{
+.add-cart-popup .popup-contents p{
     text-align: right;
     font-size: 0.75rem;
     font-weight: 300;
@@ -125,17 +125,6 @@
 .add-cart-popup.show{
     top:0;
 }
-
-
-
-@media (max-width: 575px) {
-    .nav-subcate {
-        justify-content:flex-start !important;
-    }
-}
-
-
-
 
 
 

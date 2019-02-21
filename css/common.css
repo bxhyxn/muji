@@ -220,6 +220,7 @@ header .nav-item {
 }
 .topbar-right .login-btn .icon {
     width: 1.4rem;
+    margin-right: -0.8rem;
 }
 
 /* 스크롤 다운 시 헤더 줄어들게 설정 */
@@ -434,9 +435,7 @@ section {
 }
 
 /* 현재 위치 네비게이션 */
-.navigation p{
-/*    margin-top: 1.5rem;*/
-}
+
 .nav-subcate{
     flex-wrap: nowrap;
     overflow-x: scroll;
@@ -457,7 +456,11 @@ section {
     color:#7f0019;
     border-bottom: 1px solid #7f0019;
 }
-
+@media (max-width: 575px) {
+    .navigation .nav-subcate {
+        justify-content:flex-start !important;
+    }
+}
 
 /* 페이징 */
 .pagination {
@@ -513,6 +516,7 @@ footer {
 }
 .footer-laws li{
     margin-right: 1rem;
+    margin-bottom: 0.5rem;
 }
 .footer-laws p>a,
 .footer-laws li,

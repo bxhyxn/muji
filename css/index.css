@@ -233,6 +233,9 @@ header.compressed .topbar-right .icon:hover {
         padding-right: 13%;
         height: 250px;
     }
+    .banner-slider .carousel-caption p.lead {
+        margin-bottom: 2rem;
+    }
     .banner-slider .carousel-indicators {
         height: 10px; top:55%;
     }
