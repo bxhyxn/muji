@@ -1,5 +1,5 @@
 header {
-    
+    margin-bottom: 0;
     background-color: rgba(0,0,0,0);
 }
 
@@ -227,8 +227,8 @@ header.compressed .topbar-right .icon:hover {
         height:350px !important; width:100%;
     }
     .banner-slider .carousel-caption{
-        padding-left: 15%;
-        padding-right: 15%;
+        padding-left: 13%;
+        padding-right: 13%;
         height: 250px;
     }
     .banner-slider .carousel-indicators {
