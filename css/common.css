@@ -87,8 +87,7 @@ button:focus {
 }
 
 .hover-underline::after,
-.topbar-left .nav-item>a::after,
-.topbar-right .nav-item::after{
+.topbar-left .nav-item>a::after{
     content: '';
     display: block;
     width: 0;
@@ -100,8 +99,7 @@ button:focus {
     color:#7f0019;
 }
 .hover-underline:hover::after,
-.topbar-left .nav-item>a:hover::after,
-.topbar-right .nav-item:hover::after{
+.topbar-left .nav-item>a:hover::after{
     width: 100%;
 }
 .discover-btn {
@@ -175,14 +173,13 @@ header .nav-item {
 }
 .nav-tabs-wrapper.tabs-in-sidebar {
     position: fixed;
-    
+    margin-top: -2rem;
     width: 300px;
 /*    margin-top: 3rem;*/
     padding-left:2rem !important;
     left:-300px;
     transition: all 1s ease;
 }
-
 .topbar-left .nav-item>a:hover,
 .topbar-right .nav-item:hover,
 .topbar-right .icon:hover,
@@ -217,14 +214,24 @@ header .nav-item {
 }
 
 .topbar-right>a{
-    padding-right: 1.3rem;
+/*    padding-right: 1.3rem;*/
 }
 
-.topbar-right .topbar-cart-icon .icon {
+.topbar-right>a.icon {
     position: absolute;
-    right:0;
-    margin-top:-4px;
+    top:-1rem;
     width:1.2rem;
+    cursor:pointer;
+    right:0;
+}
+.topbar-right>a.icon:hover {
+    cursor: pointer;
+}
+.topbar-right .topbar-cart-icon .icon {
+/*    position: absolute;*/
+/*    right:0;*/
+/*    margin-top:-4px;*/
+/*    width:1.2rem;*/
 }
 
 /* 스크롤 다운 시 헤더 줄어들게 설정 */
@@ -514,11 +521,7 @@ footer {
     .topbar-logo img {
         max-width: 140px;
     }
-    .sidebar-btn {
-        position: absolute;
-        margin-left: 2rem;
-        left:0; bottom:5rem;
-    }
+    
     
     footer .footer-laws address {
         max-width: 100%; }
@@ -536,7 +539,9 @@ footer {
     .topbar-cart-icon {
             margin-top: -8px;
         }
-    
+    .nav-tabs-container.tab-content .tab-pane {
+    padding-top: 4rem !important;
+}
     
     .footer-newsletter {
 /*        padding-left: 1rem !important;*/
