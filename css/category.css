@@ -96,11 +96,11 @@
 
 
 .add-cart-popup {
-    display: block;
     position: fixed;
     top:-56px; left:0;
     width: 100%;
     height:56px;
+    opacity: 0;
     
 /*    width: 100vw; height:100vh;*/
     background-color: rgba(0,0,0,0.3);
@@ -121,10 +121,11 @@
     font-weight: 300;
     line-height: 56px;
     padding-right: 2rem;
+    
 }
 .add-cart-popup.show{
     top:0;
+    opacity:1;
 }
-
 
 

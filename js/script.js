@@ -1,6 +1,6 @@
 $(document).ready(function(){
     // 탭 hover 해서 전환 //
-    $(document).on('mouseenter', '[data-toggle="tab"]', function () {
+    $(document).on('mouseenter', '.topbar-left [data-toggle="tab"]', function () {
       $(this).tab('show');
     });
     
@@ -35,7 +35,6 @@ $(document).ready(function(){
     });
     
     // 스크롤 다운시 헤더 줄어듬, top버튼 나옴 //
-    
     $(window).on("scroll", function() {
             if ($(window).scrollTop() >= 20) {
                 $("header").addClass("compressed"),

@@ -1,0 +1,208 @@
+header, header.compressed {
+    background-color: transparent;
+}
+h5 {
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: center;
+}
+.whatismuji {
+    padding: 0;
+    margin-top: -2rem; 
+}
+.whatismuji img {
+    width: 100%; height:100%;
+    object-fit: cover;
+}
+.whatismuji p {
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    font-weight: 300;
+}
+.whatismuji .container-1 {
+    width: 100%;
+    margin-top: -126px !important;
+    position: relative;
+}
+.whatismuji .text-1 {
+    position: absolute;
+    top:25%;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
+}
+.whatismuji .text-1 p.lead {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 2;
+}
+
+.whatismuji .scrolldown {
+/*    margin-top: 2rem;*/
+    margin: 3rem auto;
+    border:1px solid black;
+    width: 45px; height: 45px;
+}
+.whatismuji .scrolldown .icon {
+    display: block;
+    margin:9px auto;
+}
+
+.whatismuji p.lead {
+    font-size: 1.1rem;
+    font-weight: 400;
+    padding-bottom: 2rem;
+}
+
+.whatismuji .container-2, .whatismuji .container-3, #company-info {
+    padding: 10% 15%;
+}
+
+.whatismuji .text-2 {
+    width:50%;
+    margin-right: 5%;
+}
+.whatismuji .img-2 {
+    width:50%;
+    margin-left: 5%;
+}
+
+.whatismuji .img-3 {
+    width:50%;
+    margin-right: 5%;
+}
+.whatismuji .text-3 {
+    width:50%;
+    margin-left: 5%;
+}
+
+/* MUJI STORY 카드 영역 */
+#mujistory {
+    padding-top: 6rem !important;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    border:none;
+}
+.card img {
+    display: block;
+    border-radius: 0;
+    transition: all 1s ease;
+}
+.card:hover img {
+    transform: scale(1.2);
+    opacity: 0.4;
+}
+.card-img-overlay {
+    display: none;
+    height:25%; 
+    top:35%; padding:0;
+    transition: all 1s ease;
+}
+.card:hover .card-img-overlay {
+    display: block;
+    color:#7f0019;
+}
+.card-img-overlay p {
+    margin:0;
+    font-size: 0.7rem;
+    font-weight: 400;
+    position: absolute;
+    text-align: center;
+    top:50%; left:-50%; right:-50%;
+    transform: translateY(-50%);
+}
+
+
+#company-info {
+    padding-top: 6rem !important;
+}
+
+#company-info table {
+    width:100%;
+    border-spacing: 5px;
+}
+
+#company-info table th {
+    width: 80px;
+}
+#company-info table th, #company-info table td {
+    padding: 0.7rem 0 !important;
+    border-bottom: 1px solid #999;
+}
+
+
+/* 스토리 카드 모달 */
+#story-modal {
+    width:100%;
+}
+
+#story-modal .modal-dialog {
+    width: 90%; height: 90%;
+    background-color: #fff;
+}
+#story-modal .story-content {
+    padding: 10% 5%;
+}
+#story-modal .story-content h6 {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: #7f0019;
+}
+#story-modal .story-content p {
+    font-weight: 300;
+    line-height: 1.7;
+    text-indent: 1rem;
+}
+#story-modal .story-content img{
+    width:100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+@media (max-width: 992px) {
+    .whatismuji .container-2, .whatismuji .container-3, #company-info {
+        padding: 5% 10%;
+}
+@media (max-width: 767px) {
+    .whatismuji .text-1 {
+        position: relative;
+        padding-left: 5%; padding-right: 5%;
+    }
+    .whatismuji .text-1 h5 {
+        margin-top: -35%;
+    }
+    .whatismuji .text-1 p.lead {
+        margin-top: 40%;
+        font-size: 1.1rem;
+    }
+    .whatismuji .scrolldown {
+        display: none;
+    }
+    .whatismuji .container-2, .whatismuji .container-3, #company-info {
+        padding: 5% 5%;
+        display: block !important;
+    }
+    .whatismuji .text-2, .whatismuji .img-2 {
+        width:100%;
+        margin-left: 0;
+    }
+    .whatismuji .text-3, .whatismuji .img-3 {
+        width:100%;
+        margin-left: 0;
+    }
+    #story-modal {
+        width:100%;
+        margin:0; padding:0;
+    }
+
+    #story-modal .modal-dialog {
+        width: 100%; height: 100%;
+        background-color: #fff;
+        margin:0; padding:0;
+    }
+}

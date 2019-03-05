@@ -19,7 +19,7 @@
         <div class="topbar-left col-4 col-md-4 my-auto navbar-expand-lg">
             <!-- 카테고리 탭-->
             <div class="d-lg-none cate-open-btn" data-icon="ei-navicon" data-size="s"></div>
-            <ul class="nav-tabs-wrapper nav p-0 d-none d-lg-flex">
+            <ul class="nav-tabs-wrapper nav p-0 d-none d-lg-flex" role="tablist">
                <li class="nav-item"><a id="nav-products-tab" data-toggle="tab" href="#nav-products" role="tab" aria-controls="nav-products" aria-selected="true" class="active">제품보기</a></li>
                <li class="nav-item"><a id="nav-muji-tab" data-toggle="tab" href="#nav-muji" role="tab" aria-controls="nav-muji" aria-selected="false">읽기</a></li>
                <li class="nav-item"><a id="nav-store-tab" data-toggle="tab" href="#nav-store" role="tab" aria-controls="nav-store" aria-selected="false">방문</a></li>
@@ -29,12 +29,11 @@
             <!-- 카테고리 사이드바-->
             <div id="category-wrapper" class="tab-content nav-tabs-container sidebar">
                 <button type="button" class="close-btn"><div data-icon="ei-close"></div></button>
-                <ul class="nav-tabs-wrapper tabs-in-sidebar d-lg-none nav p-0">
+                <ul class="nav-tabs-wrapper tabs-in-sidebar d-lg-none nav p-0" role="tablist">
                    <li class="nav-item"><a id="nav-products-tab" data-toggle="tab" href="#nav-products" role="tab" aria-controls="nav-products" aria-selected="true" class="active">제품보기</a></li>
                    <li class="nav-item"><a id="nav-muji-tab" data-toggle="tab" href="#nav-muji" role="tab" aria-controls="nav-muji" aria-selected="false">읽기</a></li>
                    <li class="nav-item"><a id="nav-store-tab" data-toggle="tab" href="#nav-store" role="tab" aria-controls="nav-store" aria-selected="false">방문</a></li>
                    <li class="nav-item"><a id="nav-search-tab" data-toggle="tab" href="#nav-search" role="tab" aria-controls="nav-search" aria-selected="false">검색</a></li>
-<!--                   <a class="login-btn sidebar-btn hover-underline d-sm-none" data-target="#login-modal" data-toggle="modal" href="#">로그인</a>-->
                 </ul>
                 <!-- 제품보기 -->
                 <div class="tab-pane products-tab active" id="nav-products" role="tabpanel" aria-labelledby="nav-products">
@@ -103,24 +102,18 @@
                         <li>
                             <a data-toggle="collapse" href="#cate2-1" role="button" aria-expanded="false" aria-controls="cate2-1">MUJI 無印良品</a>
                             <ul class="subcategory collapse" id="cate2-1">
-                                <li><a href="#">What is MUJI</a></li>
-                                <li><a href="#">About MUJI</a></li>
-                                <li><a href="#">MUJI 이야기</a></li>
+                                <li><a href="whatismuji.html">What is MUJI</a></li>
+                                <li><a href="whatismuji.html#mujistory">MUJI 이야기</a></li>
+                                <li><a href="whatismuji.html#company-info">기업 정보</a></li>
                             </ul>
                         </li>
                         <li>
                             <a data-toggle="collapse" href="#cate2-2" role="button" aria-expanded="false" aria-controls="cate2-2">카탈로그</a>
                             <ul class="subcategory collapse" id="cate2-2">
-                                <li><a href="#">2019 S/S</a></li>
-                                <li><a href="#">2018 F/W</a></li>
-                                <li><a href="#">2018 S/S</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a data-toggle="collapse" href="#cate2-3" role="button" aria-expanded="false" aria-controls="cate2-3">기업 정보</a>
-                            <ul class="subcategory collapse" id="cate2-3">
-                                <li><a href="#">기업 정보</a></li>
-                                <li><a href="#">채용 공고</a></li>
+                                <li><a href="http://image.mujikorea.net/upload/catalog/2018ss_catalog_kr.compressed.pdf" target="_blank">2018 S/S</a></li>
+                                <li><a href="http://image.mujikorea.net/upload/catalog/2017_aw_catalog.pdf" target="_blank">2017 A/W</a></li>
+                                <li><a href="http://image.mujikorea.net/upload/catalog/2017sscatalog.pdf" target="_blank">2018 S/S</a></li>
+                                <li><a href="#">더 보기</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -224,7 +217,7 @@
                         <hr>
                         <div class="cart-btn d-flex justify-content-around text-center">
                             <a class="hover-underline" href="cart.html">장바구니 보기</a>
-                            <a class="hover-underline" href="checkout.html">주문하기</a>
+                            <a class="hover-underline" href="#">주문하기</a>
                         </div>
                     </div>
                 </div>
@@ -269,12 +262,12 @@
                 </div>
                 <div class="carousel-item home-full-item">
                     <div class="img-frame">
-                        <img src="img/main/muji2.jpg" alt="muji">
+                        <img src="img/main/new.jpg" alt="new life">
                     </div>
                     <div class="carousel-caption">
-                        <h4 class="">About MUJI</h4>
-                        <p class="lead">항상 북극을 가리키는 나침반처럼,<br> 우리는 생활의 '기본'과 '보편'을 지향해 나갈 것입니다.</p>
-                        <p class="discover-btn"><a href="aboutmuji.html">자세히 알아보기</a></p>
+                        <h4 class="">신생활, 새로운 시작</h4>
+                        <p class="lead">일부 품목 기획가 (3월 1일 - 3월 21일)
+                        <p class="discover-btn"><a href="#">자세히 알아보기</a></p>
                     </div>
                 </div>   
                 <!--좌우 이동 버튼-->
@@ -475,7 +468,7 @@
             <h4>무인양품</h4>
             <h6>What is MUJI</h6>
             <p>지극히 합리적인 공정을 통해 생산된 상품은 매우 간결합니다. <br> 이를테면 '텅 빈 그릇'과 같은 존재로, 단순하면서도 여백이 있기 때문에 사람들의 다양한 생각을 받아들일 수 있는 유연함이 그 속에서 태어날 수 있습니다.</p>
-            <p class="discover-btn"><a href="#">자세히 알아보기</a></p>
+            <p class="discover-btn"><a href="whatismuji.html">자세히 알아보기</a></p>
         </div>
     </section>
     <!-- 브랜드 스토리 2 -->   
@@ -484,7 +477,7 @@
             <h4>무지 이야기</h4>
             <h6>자연, 당연, 무지.</h6>
             <p>무인양품의 시작은 자연입니다. <br>자연 그대로의 색, 천연소재, 소박한 종이에서부터 전까지 있는 그대로의 매력을 찾아 무인양품은 시작되었습니다. </p>
-            <p class="discover-btn"><a href="#">자세히 알아보기</a></p>
+            <p class="discover-btn"><a href="whatismuji.html#mujistory">자세히 알아보기</a></p>
         </div>
         <div class="brand-story-img">
             <img src="img/mujinature.jpg" alt="what is muji">
@@ -495,25 +488,15 @@
         <div class="brand-story-img ">
             <div class="story-card-wrapper row no-gutters">
                 <div class="story-card col-4">
-                    <div class="card"><a href="mujistory.html">
+                    <div class="card"><a href="whatismuji.html#mujistory">
                         <img src="img/card/01.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
                             <p>MUJI의 모듈</p>
                         </div></a>
                     </div>
                 </div>
-<!--
                 <div class="story-card col-4">
-                    <div class="card"><a href="mujistory.html">
-                        <img src="img/card/02.jpg" alt="" class="card-img">
-                        <div class="card-img-overlay">
-                            <p>MUJI의 아카이브</p>
-                        </div></a>
-                    </div>
-                </div>
--->
-                <div class="story-card col-4">
-                    <div class="card"><a href="mujistory.html">
+                    <div class="card"><a href="whatismuji.html#mujistory">
                         <img src="img/card/03.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
                             <p>MUJI의 디자인</p>
@@ -521,7 +504,7 @@
                     </div>
                 </div>
                 <div class="story-card col-4">
-                    <div class="card"><a href="mujistory.html">
+                    <div class="card"><a href="whatismuji.html#mujistory">
                         <img src="img/card/04.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
                             <p>MUJI의 가구</p>
@@ -529,7 +512,7 @@
                     </div>
                 </div>
                 <div class="story-card col-4">
-                    <div class="card"><a href="mujistory.html">
+                    <div class="card"><a href="whatismuji.html#mujistory">
                         <img src="img/card/food.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
                             <p>MUJI의 음식</p>
@@ -537,25 +520,15 @@
                     </div>
                 </div>
                 <div class="story-card col-4">
-                    <div class="card"><a href="mujistory.html">
+                    <div class="card"><a href="whatismuji.html#mujistory">
                         <img src="img/card/fabric.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
                             <p>MUJI의 패브릭</p>
                         </div></a>
                     </div>
                 </div>
-<!--
                 <div class="story-card col-4">
-                    <div class="card"><a href="mujistory.html">
-                        <img src="img/card/organic.jpg" alt="" class="card-img">
-                        <div class="card-img-overlay">
-                            <p>MUJI의 오가닉</p>
-                        </div></a>
-                    </div>
-                </div>
--->
-                <div class="story-card col-4">
-                    <div class="card"><a href="mujistory.html">
+                    <div class="card"><a href="whatismuji.html#mujistory">
                         <img src="img/card/nature.jpg" alt="" class="card-img">
                         <div class="card-img-overlay">
                             <p>자연, 당연, 무인양품</p>
@@ -607,11 +580,9 @@
                <div class="footer-list col-6 col-sm-3 col-lg-4">
                    <p class="text-muted">브랜드 스토리</p>
                    <ul class="m-0 px-0">
-                       <li><a href="#">About MUJI</a></li>
-                       <li><a href="#">What is MUJI</a></li>
-                       <li><a href="#">MUJI 이야기</a></li>
-<!--                       <li><a href="#">카탈로그</a></li>-->
-                       <li><a href="#">기업 정보</a></li>
+                       <li><a href="whatismuji.html">What is MUJI</a></li>
+                       <li><a href="whatismuji.html#mujistory">MUJI 이야기</a></li>
+                       <li><a href="whatismuji.html#company-info">기업 정보</a></li>
                     </ul>
                </div>
                <div class="footer-list col-6 col-sm-3 col-lg-4">
