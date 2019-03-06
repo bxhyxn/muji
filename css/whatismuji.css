@@ -55,7 +55,7 @@ h5 {
     padding-bottom: 2rem;
 }
 
-.whatismuji .container-2, .whatismuji .container-3, #company-info {
+.whatismuji .container-2, .whatismuji .container-3, #mujistory, #company-info {
     padding: 10% 15%;
 }
 
@@ -79,7 +79,7 @@ h5 {
 
 /* MUJI STORY 카드 영역 */
 #mujistory {
-    padding-top: 6rem !important;
+/*     padding-top: 6rem !important; */
 }
 
 .card {
@@ -165,7 +165,7 @@ h5 {
     margin-bottom: 2rem;
 }
 @media (max-width: 992px) {
-    .whatismuji .container-2, .whatismuji .container-3, #company-info {
+    .whatismuji .container-2, .whatismuji .container-3, #mujistory, #company-info {
         padding: 5% 10%;
 }
 @media (max-width: 767px) {
@@ -183,7 +183,7 @@ h5 {
     .whatismuji .scrolldown {
         display: none;
     }
-    .whatismuji .container-2, .whatismuji .container-3, #company-info {
+    .whatismuji .container-2, .whatismuji .container-3, #mujistory, #company-info {
         padding: 5% 5%;
         display: block !important;
     }
